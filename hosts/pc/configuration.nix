@@ -38,6 +38,41 @@ in {
   networking.hostName = "tom-pc";
   security.rtkit.enable = true;
 
+  # Intel CPU Microcode
+  hardware.cpu.intel.updateMicrocode = true;
+
+  # NVIDIA RTX 4090
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  boot.blacklistedKernelModules = [ "nouveau" ];
+
+  hardware.nvidia = {
+    modesetting.enable = true;   # wichtig für Wayland
+    nvidiaSettings = true;
+
+    # Für 4090 empfehlenswert (beste Kompatibilität):
+    open = false;
+
+    # Stabiler Treiber aus deinem aktuellen Kernelpaket
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+    # Optional, aber meist sinnvoll:
+    persistence = true;  # hält das NVIDIA-Modul "warm"
+    powerManagement.enable = true;
+  };
+
+  # OpenGL/Vulkan + 32-bit (Steam)
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  # Wayland/Hyprland: optionaler Fix, falls Cursor-Flicker o.ä.
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    WLR_NO_HARDWARE_CURSORS = "1";
+  };
+  
   # Sound
   services.pipewire = {
      enable = true;
@@ -58,8 +93,12 @@ in {
       "steam-original"
       "steam-run"
       "discord"
+      # NVIDIA
+      "nvidia-x11"
+      "nvidia-settings"
+      "nvidia-persistenced"
     ];  
-
+    
 
   # programs.firefox.enable = true;
 
