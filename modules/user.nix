@@ -29,7 +29,7 @@
 	  ];
 	};
 
-      environment.etc."nvim/init.vim".source = ../../modules/nix.vim;
+      environment.etc."nvim/init.vim".source = ./modules/nix.vim;
 
       # packages
       environment.systemPackages = with pkgs;
