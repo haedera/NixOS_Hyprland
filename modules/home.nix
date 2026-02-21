@@ -23,7 +23,6 @@
   home.file.".config/ghostty".source = ../config/ghostty;
   home.file.".config/fastfetch".source = ../config/fastfetch;
 #  home.file.".gitconfig".source = ./git_config/.gitconfig;
-  environment.etc."nvim/init.vim".source = ../../modules/nix.vim;
 
 
 #  options.user = {
