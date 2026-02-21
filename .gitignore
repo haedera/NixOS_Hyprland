@@ -1,0 +1,26 @@
+# Nix
+result
+result-*
+*.drv
+*.lock
+
+# direnv
+.direnv
+
+# environment files
+.env
+.env.*
+
+# editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
