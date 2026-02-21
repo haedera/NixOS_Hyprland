@@ -29,7 +29,7 @@ in {
       ../../modules/nix_settings.nix
       ../../modules/wireshark.nix
       ../../modules/user.nix
-      ../../modules/nix.vim
+      # ../../modules/nix.vim
       # ../../modules/home.nix
       ../../git_config/gitconfig.nix
       # ../../.ssh
