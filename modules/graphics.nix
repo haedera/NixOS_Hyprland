@@ -2,22 +2,7 @@
   hypr-pkgs = hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in {
   
-  # Graphics
-  hardware.graphics = {
-    enable = true;
-
-    extraPackages = [
-      pkgs.rocmPackages.clr.icd
-    ];
-
-    # 32bit Support (eg. Steam)
-    enable32Bit = true;
-
-    package = hypr-pkgs.mesa;
-    package32 = hypr-pkgs.pkgsi686Linux.mesa;
-  };
-
-  services.xserver.videoDrivers = ["amdgpu"]; # Amazing naming. This is for Xorg and Wayland
+  
   services.displayManager.sddm.enable = true;
   services.displayManager.sddm.wayland.enable = true;
 

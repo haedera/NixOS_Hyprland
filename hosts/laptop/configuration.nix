@@ -1,5 +1,6 @@
 { config, lib, pkgs, hyprland, fuzzel-pass, ... }: let
   username = "kaisel";
+  hypr-pkgs = hyprland.inputs.nixpkgs.legacyPackages.${pkgs.stdenv.hostPlatform.system};
 in {
   users.users.${username} = {
     isNormalUser = true;
@@ -37,6 +38,23 @@ in {
   # Network stuff
   networking.hostName = "tom-laptop";
   security.rtkit.enable = true;
+  
+  # Graphics
+  hardware.graphics = {
+    enable = true;
+
+    extraPackages = [
+    	pkgs.rocmPackages.clr.icd
+    ];
+
+    # 32bit Support (eg. Steam)
+    enable32Bit = true;
+
+    package = hypr-pkgs.mesa;
+    package32 = hypr-pkgs.pkgsi686Linux.mesa;
+  };
+
+  services.xserver.videoDrivers = ["amdgpu"]; # Amazing naming. This is for Xorg and Wayland
 
   # Sound
   services.pipewire = {
