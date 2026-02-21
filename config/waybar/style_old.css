@@ -1,0 +1,214 @@
+@define-color bg    #1a1b26; 
+@define-color fg    #a9b1d6; 
+@define-color blk   #32344a; 
+@define-color red   #f7768e; 
+@define-color grn   #9ece6a; 
+@define-color ylw   #e0af68; 
+@define-color blu   #7aa2f7; 
+@define-color mag   #ad8ee6; 
+@define-color cyn   #0db9d7; 
+@define-color brblk #444b6a; 
+@define-color white #ffffff; 
+
+* {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 16px;
+    #font-weight: bold;
+}
+
+window#waybar {
+    background-color: @bg;
+    color: @fg;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    color: @cyn;
+    background: transparent;
+    border-bottom: 3px solid @bg;
+}
+#workspaces button.active {
+    color: @cyn;
+    border-bottom: 3px solid @mag;
+}
+#workspaces button.empty {
+    color: @white;
+}
+#workspaces button.empty.active {
+    color: @cyn;
+    border-bottom: 3px solid @mag;
+}
+
+#workspaces button.urgent {
+    background-color: @red;
+}
+
+button:hover {
+    background: inherit;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#clock,
+#custom-sep,
+#battery,
+#cpu,
+#memory,
+#disk,
+#network,
+#tray {
+    padding: 0 8px;
+    color: @white;
+}
+
+#custom-sep {
+    color: @brblk;
+}
+
+#clock {
+    color: @cyn;
+    border-bottom: 4px solid @cyn;
+}
+
+#battery {
+    color: @mag;
+    border-bottom: 4px solid @mag;
+}
+
+#disk {
+    color: @ylw;
+    border-bottom: 4px solid @ylw;
+}
+
+#memory {
+    color: @mag;
+    border-bottom: 4px solid @mag;
+}
+
+#cpu {
+    color: @grn;
+    border-bottom: 4px solid @grn;
+}
+
+#network {
+    color: @blu;
+    border-bottom: 4px solid @blu;
+}
+
+#network.disconnected {
+    background-color: @red;
+}
+
+#tray {
+    background-color: #2980b9;
+}
+
+@define-color text #abb2bf;
+@define-color bg #21252b;
+@define-color bg-highlight #323844;
+@define-color purple #c678dd;
+@define-color green #98c379;
+
+* {
+    font-family: 'JetBrains Mono';
+    font-size: 13px;
+}
+
+window#waybar {
+    color: @text;
+
+    background-color: transparent;
+}
+
+#workspaces button,
+#window,
+#clock,
+#network,
+#pulseaudio,
+#tray,
+#battery,
+.wireguard {
+    color: @text;
+
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 5px;
+    border: 1px solid @bg-highlight;
+    border-radius: 0;
+
+    background-color: @bg;
+}
+
+#pulseaudio,
+#network,
+#tray,
+#battery,
+#clock {
+    border-right: 2px solid @purple;
+}
+
+#battery.critical {
+    border: 2px solid red;
+}
+
+.wireguard {
+    border-right: 2px solid @green;
+}
+
+#workspaces {
+    background-color: transparent;
+}
+
+#workspaces button.active {
+    font-weight: bold;
+    color: @green;
+
+    border: 1px solid @purple;
+
+    background-color: @bg-highlight;
+}
+
+#workspaces button:hover {
+    border: 1px solid @bg;
+
+    background-color: @bg-highlight;
+
+    /* I hate GTK with a passion */
+    background-image: none;
+    box-shadow: none;
+    transition: none;
+}
+
+#workspaces button.active:hover {
+    font-weight: bold;
+    color: @green;
+
+    border: 1px solid @purple;
+
+    background-color: @bg-highlight;
+
+    /* I hate GTK with a passion */
+    background-image: none;
+    box-shadow: none;
+    transition: none;
+}
+
+#pulseaudio.muted {
+    font-weight: bold;
+    color: @purple;
+
+    background-color: @bg-highlight;
+}
+
+#network.disconnected {
+    font-weight: bold;
+    color: @purple;
+
+    background-color: @bg-highlight;
+}
+
+#clock {
+    font-weight: bold;
+    color: @green;
+}
