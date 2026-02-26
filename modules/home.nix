@@ -22,29 +22,6 @@
   home.file.".config/fuzzel".source = ../config/fuzzel;
   home.file.".config/ghostty".source = ../config/ghostty;
   home.file.".config/fastfetch".source = ../config/fastfetch;
-#  home.file.".gitconfig".source = ./git_config/.gitconfig;
-
-
-#  options.user = {
-#    enable = lib.mkEnableOption "User Account";
-#
-#    username = lib.mkOption {
-#      default = "hadera";
-#      description = "Username";
-#    };
-#
-#    packages = lib.mkOption {
-#      default = [];
-#      description = "Additional system specific packages";
-#    };
-#  };
-
-#  config = lib.mkIf config.user.enable {
-#    # Environment variables
-#    environment.variables = {
-#      EDITOR = "nvim";
-#      TERMINAL = "ghostty";
-#    };
 
     home.packages = with pkgs; [
       font-awesome

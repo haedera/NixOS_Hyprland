@@ -1,39 +1,21 @@
 { lib, config, pkgs, fuzzel-pass, ... }:{
-  
-#e = lib.mkOption {
-#      default = "hadera";
-#      description = "Username";
-#    };
-#
-#    packages = lib.mkOption {
-#      default = [];
-#      description = "Additional system specific packages";
-#    };
-#  };
 
-#  config = lib.mkIf config.user.enable {
-#    # Environment variables
-#    environment.variables = {
-#      EDITOR = "nvim";
-#      TERMINAL = "ghostty";
-#    };
-#      shell = pkgs.zsh;
-	users.users.kaisel = {
-	  isNormalUser = true;
-	  extraGroups = [
+  users.users.kaisel = {
+    isNormalUser = true;
+    extraGroups = [
 	    "wheel"
 	    "networkmanager"
 	    "libvirtd"
 	    "docker"
 	    "wireshark"
-	  ];
-	};
+    ];
+  };
 
-      environment.etc."nvim/init.vim".source = ./nix.vim;
+  environment.etc."nvim/init.vim".source = ./nix.vim;
 
-      # packages
-      environment.systemPackages = with pkgs;
-        [
+  # packages
+  environment.systemPackages = with pkgs;
+    [
 	  
 	# Generell Util
 	  gcc

@@ -7,10 +7,10 @@
         	url = "github:hyprwm/Hyprland";
         	inputs.nixpkgs.follows = "nixpkgs";
         };
-	fuzzel-pass = {
-      		url = "github:d-hain/fuzzel-pass";
-      		inputs.nixpkgs.follows = "nixpkgs";
-    	};
+#	fuzzel-pass = {
+#      		url = "";
+#      		inputs.nixpkgs.follows = "nixpkgs";
+#    	};
 	home-manager = {
 		url = "github:nix-community/home-manager";
 		inputs.nixpkgs.follows = "nixpkgs";
@@ -31,6 +31,8 @@
 
         		modules = [
       				./hosts/pc/configuration.nix
+				./hosts/pc/config/hypr/hyprland.conf
+				./hosts/pc/config/waybar/waybar.jsonc
 				home-manager.nixosModules.home-manager {
 					home-manager = {
 						useGlobalPkgs = true;
@@ -50,6 +52,8 @@
 
         		modules = [
           			./hosts/laptop/configuration.nix
+				./hosts/laptop/config/hypr/hyprland.conf
+				./hosts/laptop/config/waybar/waybar.jsonc	
 				home-manager.nixosModules.home-manager {
 					home-manager = {
 						useGlobalPkgs = true;
