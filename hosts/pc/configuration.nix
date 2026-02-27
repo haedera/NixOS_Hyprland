@@ -57,7 +57,7 @@ in {
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
     # Optional, aber meist sinnvoll:
-    persistence = true;  # hält das NVIDIA-Modul "warm"
+    nvidiaPersistenced = true;  # hält das NVIDIA-Modul "warm"
     powerManagement.enable = true;
 
     prime = {
@@ -78,11 +78,11 @@ in {
  ];
 
   #Virtualisierung
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
+#  virtualisation.virtualbox.host.enable = true;
+#  virtualisation.virtualbox.host.enableExtensionPack = true;
   #Fucking VBox
-  environment.extraInit = ''export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"'';
-  programs.dconf.enable = true;
+#  environment.extraInit = ''export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"'';
+#  programs.dconf.enable = true;
   
 
   # OpenGL/Vulkan + 32-bit (Steam)
