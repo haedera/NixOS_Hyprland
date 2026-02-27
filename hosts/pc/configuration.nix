@@ -59,7 +59,31 @@ in {
     # Optional, aber meist sinnvoll:
     persistence = true;  # hält das NVIDIA-Modul "warm"
     powerManagement.enable = true;
+
+    prime = {
+      offload.enable = true;
+      offload.enableOffloadCmd = true;
+
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
+    };
   };
+
+ services.xserver.enableCtrlAltBackspace = true;
+
+
+ boot.kernelParams = [
+   "nvidia-drm.modeset=1"
+   "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+ ];
+
+  #Virtualisierung
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
+  #Fucking VBox
+  environment.extraInit = ''export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"'';
+  programs.dconf.enable = true;
+  
 
   # OpenGL/Vulkan + 32-bit (Steam)
   hardware.graphics = {
