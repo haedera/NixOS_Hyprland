@@ -27,13 +27,17 @@
 
         		modules = [
       				./hosts/pc/configuration.nix
-				./hosts/pc/config/hypr/hyprland.nix
-				./hosts/pc/config/waybar/waybar.nix
 				home-manager.nixosModules.home-manager {
 					home-manager = {
 						useGlobalPkgs = true;
 						useUserPackages = true;
-						users.kaisel = import ./modules/home.nix;
+						users.kaisel = {
+							imports = [
+							  ./modules/home.nix
+							  ./hosts/pc/config/hypr/hyprland.nix
+							  ./hosts/pc/config/waybar/waybar.nix
+							];
+						};
 						backupFileExtension = "backup";
 					};
 				}
@@ -48,13 +52,17 @@
 
         		modules = [
           			./hosts/laptop/configuration.nix
-				./hosts/laptop/config/hypr/hyprland.nix
-				./hosts/laptop/config/waybar/waybar.nix	
 				home-manager.nixosModules.home-manager {
 					home-manager = {
 						useGlobalPkgs = true;
 						useUserPackages = true;
-						users.kaisel = import ./modules/home.nix;
+						users.kaisel = {
+							imports = [
+							  ./modules/home.nix
+							  ./hosts/laptop/config/hypr/hyprland.nix
+							  ./hosts/laptop/config/waybar/waybar.nix
+							];
+						};
 						backupFileExtension = "backup";
 					};
 				}

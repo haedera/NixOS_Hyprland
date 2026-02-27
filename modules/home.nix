@@ -21,18 +21,7 @@
   home.file.".config/foot".source = ../config/foot;
   home.file.".config/fuzzel".source = ../config/fuzzel;
   home.file.".config/ghostty".source = ../config/ghostty;
-  home.file.".config/fastfetch".source = ../config/fastfetch;
-  
-  nixosConfigurations = {
-	tom-pc = nixpkgs.lib.nixosSystem {
- 		home.file.".config/hypr".source = ../config/hypr && ../hosts/laptop/config/hypr
-		home.file.".config/waybar".source = ../config/waybar && ../hosts/laptop/config/waybar
-	};
-	tom-laptop = nixpkgs.lib.nixosSystem {
-		home.file.".config/hypr".source = ../config/hypr && ../hosts/laptop/config/hypr
-		home.file.".config/waybar".source = ../config/waybar && ../hosts/laptop/config/waybar
-	};
-  };
+  home.file.".config/fastfetch".source = ../config/fastfetch; 
 
     home.packages = with pkgs; [
       font-awesome
