@@ -27,8 +27,8 @@
 
         		modules = [
       				./hosts/pc/configuration.nix
-				#./hosts/pc/config/hypr/hyprland.conf
-				#./hosts/pc/config/waybar/waybar.jsonc
+				./hosts/pc/config/hypr/hyprland.nix
+				./hosts/pc/config/waybar/waybar.nix
 				home-manager.nixosModules.home-manager {
 					home-manager = {
 						useGlobalPkgs = true;
@@ -48,8 +48,8 @@
 
         		modules = [
           			./hosts/laptop/configuration.nix
-				#./hosts/laptop/config/hypr/hyprland.conf
-				#./hosts/laptop/config/waybar/waybar.jsonc	
+				./hosts/laptop/config/hypr/hyprland.nix
+				./hosts/laptop/config/waybar/waybar.nix	
 				home-manager.nixosModules.home-manager {
 					home-manager = {
 						useGlobalPkgs = true;
