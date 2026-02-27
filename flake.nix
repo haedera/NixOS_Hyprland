@@ -6,10 +6,6 @@
     	hyprland = {
         	url = "github:hyprwm/Hyprland";
         	inputs.nixpkgs.follows = "nixpkgs";
-        };
-	fuzzel-pass = {
-      		url = "";
-      		inputs.nixpkgs.follows = "nixpkgs";
     	};
 	home-manager = {
 		url = "github:nix-community/home-manager";
@@ -17,7 +13,7 @@
 	};
   };
 	
-  outputs = { self, nixpkgs, home-manager, hyprland, fuzzel-pass, ...}: let
+  outputs = { self, nixpkgs, home-manager, hyprland, ...}: let
 	system = "x86_64-linux";
 	pkgs = nixpkgs.legacyPackages.${system};
   in {
@@ -26,7 +22,7 @@
 		tom-pc = nixpkgs.lib.nixosSystem {
         		inherit system;
         		specialArgs = {
-        			  inherit hyprland fuzzel-pass;
+        			  inherit hyprland;
         		};
 
         		modules = [
@@ -47,7 +43,7 @@
       		tom-laptop = nixpkgs.lib.nixosSystem {
         		inherit system;
        			specialArgs = {
-         			inherit hyprland fuzzel-pass;
+         			inherit hyprland;
         		};
 
         		modules = [
