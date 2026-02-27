@@ -49,26 +49,6 @@
         "type": "github"
       }
     },
-    "fuzzel-pass": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1770761295,
-        "narHash": "sha256-wRQU/iDX6HDwdTzSF6+CL2yod/HxwGosOpFAVToEQ/I=",
-        "owner": "d-hain",
-        "repo": "fuzzel-pass",
-        "rev": "221c05ce2ac7f379434d927a3f1b1d6c328094de",
-        "type": "github"
-      },
-      "original": {
-        "owner": "d-hain",
-        "repo": "fuzzel-pass",
-        "type": "github"
-      }
-    },
     "gitignore": {
       "inputs": {
         "nixpkgs": [
@@ -473,7 +453,6 @@
     },
     "root": {
       "inputs": {
-        "fuzzel-pass": "fuzzel-pass",
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "nixpkgs": "nixpkgs"
