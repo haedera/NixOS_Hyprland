@@ -3,7 +3,7 @@
 
     monitorv2 = [
       {
-        output = "DP-2";
+        output = "DP-3";
         mode = "2560x1440@180";
         position = "0x0";
         scale = 1;
@@ -23,7 +23,7 @@
       }
 
       {
-        output = "DP-1";
+        output = "DP-2";
         mode = "682x2560@60";
         position = "-682x0";
         scale = 1;
@@ -34,14 +34,14 @@
     ];
 
     workspace = [
-      "2, monitor:DP-2"
+      "2, monitor:DP-3"
       "1, monitor:HDMI-A-1"
-      "3, monitor:DP-1"
+      "3, monitor:DP-2"
     ];
 
     input = {
       touchdevice = {
-        output = "DP-1";
+        output = "DP-2";
       };
     };
   };

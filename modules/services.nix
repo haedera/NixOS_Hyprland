@@ -24,8 +24,29 @@
   services.pipewire = {
     enable = true;
     alsa.enable = true;
+    alsa.support32Bit = true;
     pulse.enable = true;
-    wireplumber.enable = true;
+    wireplumber = {
+      enable = true;
+
+      extraConfig = {
+        "10-default-output" = {
+          "monitor.alsa.rules" = [
+          {
+            matches = [
+              { "node.name" = "alsa_output.pci-0000_00_1f.3.analog-stereo"; }
+            ];
+            actions = {
+              update-props = {
+                "priority.session" = 2000;
+                "priority.driver" = 2000;
+                };
+              };
+            }
+          ];
+        };
+      };
+    };
   };
 
   # Enable the OpenSSH daemon.
