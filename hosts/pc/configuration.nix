@@ -41,8 +41,8 @@ in {
   # Intel CPU Microcode
   hardware.cpu.intel.updateMicrocode = true;
 
-  # NVIDIA RTX 4090
-  services.xserver.videoDrivers = [ "nvidia" ];
+  # NVIDIA RTX 4090 --> defined a bit below (again)
+  # services.xserver.videoDrivers = [ "nvidia" ];
 
   boot.blacklistedKernelModules = [ "nouveau" ];
 
