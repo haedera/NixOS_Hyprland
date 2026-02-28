@@ -20,12 +20,12 @@
     openFirewall = true;
   };
 
-  # Enable sound.
+  # Enable Sound
   services.pipewire = {
     enable = true;
     alsa.enable = true;
-    alsa.support32Bit = true;
     pulse.enable = true;
+    wireplumber.enable = true;
   };
 
   # Enable the OpenSSH daemon.
