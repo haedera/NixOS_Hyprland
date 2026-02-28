@@ -96,15 +96,7 @@ in {
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
   };
-  
-  # Sound
-  services.pipewire = {
-     enable = true;
-     alsa.enable = true;
-     alsa.support32Bit = true;
-     pulse.enable = true;
-     wireplumber.enable = true;
-  };   
+    
   
   # Autologin
   services.getty.autologinUser = "kaisel";
