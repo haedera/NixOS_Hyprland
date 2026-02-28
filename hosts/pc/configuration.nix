@@ -69,8 +69,15 @@ in {
     };
   };
 
- services.xserver.enableCtrlAltBackspace = true;
-
+ 
+ services.xserver = {
+  enable = true;
+  enableCtrlAltBackspace = true;
+  videoDrivers = [ "nvidia" ];
+  deviceSection = ''
+    Option "Coolbits" "28"
+  '';
+};
 
  boot.kernelParams = [
    "nvidia-drm.modeset=1"
