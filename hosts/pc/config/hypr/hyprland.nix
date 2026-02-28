@@ -29,13 +29,14 @@
         scale = 1;
         bitdepth = 8;
         cm = "auto";
+	transform = 90;  # rotate 90° counterclockwise
       }
     ];
 
     workspace = [
-      "3, monitor:DP-2"
+      "2, monitor:DP-2"
       "1, monitor:HDMI-A-1"
-      "2, monitor:DP-1"
+      "3, monitor:DP-1"
     ];
 
     input = {
