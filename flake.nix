@@ -34,8 +34,6 @@
 						users.kaisel = {
 							imports = [
 							  ./modules/home.nix
-							 # ./hosts/pc/config/hypr/hyprland.nix
-							 # ./hosts/pc/config/waybar/waybar.nix
 							];
 						};
 						backupFileExtension = "backup";
@@ -59,8 +57,6 @@
 						users.kaisel = {
 							imports = [
 							  ./modules/home.nix
-							 # ./hosts/laptop/config/hypr/hyprland.nix
-							 # ./hosts/laptop/config/waybar/waybar.nix
 							];
 						};
 						backupFileExtension = "backup";
