@@ -45,6 +45,5 @@
     # home.packages = [
     #   (pkgs.jetbrains.idea-community.override { /* if your nixpkgs supports overrides */ })
     # ];
-  }
-
+ 
  }
