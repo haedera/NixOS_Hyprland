@@ -73,7 +73,7 @@ in {
  services.xserver = {
   enable = true;
   enableCtrlAltBackspace = true;
-#  videoDrivers = [ "nvidia" ];
+  videoDrivers = [ "nvidia" ];
 #  deviceSection = ''
 #    Option "Coolbits" "28"
 #  '';
