@@ -20,6 +20,7 @@
 	# Generell Util
 	  gcc
 	  python3
+	  jdk21
 	  gdb
 	  cmake
 	  radare2
