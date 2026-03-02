@@ -23,7 +23,7 @@
 	  gdb
 	  radare2
 	  fastfetch
-	# ncat
+	  #ncat
 	  nmap
 	  traceroute
 	  hashcat
@@ -31,8 +31,11 @@
 	  unzip
 	  man-pages
 	  man-pages-posix
-	  prusa-slicer	
-	  net-tools	
+	  #prusa-slicer	
+	  net-tools
+
+	# Resin Printer Slicer
+	  lychee
 	
 	# neovim
 	  neovim
@@ -52,19 +55,19 @@
 	  kdePackages.qtwayland
 	  kdePackages.qtsvg
 	  kdePackages.dolphin
+	
 	# Clipboard
 	  wl-clipboard
 	  cliphist
 	
 	# Proton Util
-	# protonmail-bridge
-	# protonmail-bridge-gui
 	  protonmail-desktop
 	  proton-pass
 	  protonvpn-gui
 
-	  # 'Normal' programs
+	# 'Normal' programs
 	  brave
+	  firefox
 	  teams-for-linux
 	  discord
 	  flatpak
