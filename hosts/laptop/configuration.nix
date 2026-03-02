@@ -79,6 +79,7 @@ in {
       "steam-original"
       "steam-run"
       "discord"
+      "vscode"
     ];  
 
 
