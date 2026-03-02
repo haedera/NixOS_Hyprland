@@ -80,6 +80,7 @@ in {
       "steam-run"
       "discord"
       "vscode"
+      "idea"
     ];  
 
 
