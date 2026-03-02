@@ -21,6 +21,7 @@
 	  gcc
 	  python3
 	  gdb
+	  cmake
 	  radare2
 	  fastfetch
 	  #ncat
@@ -30,15 +31,16 @@
 	  zip
 	  unzip
 	  man-pages
-	  man-pages-posix
-	  #prusa-slicer	
+	  man-pages-posix	
 	  net-tools
 
 	# Resin Printer Slicer
 	  lychee
+	  #prusa-slicer
 	
 	# neovim
 	  neovim
+	  vscode
 	  #citool
 	
 	# Desktop Util
@@ -70,7 +72,6 @@
 	  firefox
 	  teams-for-linux
 	  discord
-	  flatpak
 	  signal-desktop
 	  wireshark
   	  kdePackages.kdenlive
