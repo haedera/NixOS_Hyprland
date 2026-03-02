@@ -47,7 +47,6 @@
 	  hyprsunset
 	  hyprlock
 	  hyprshutdown
-	  pavucontrol
 	  kdePackages.qtwayland
 	  kdePackages.qtsvg
 	  kdePackages.dolphin

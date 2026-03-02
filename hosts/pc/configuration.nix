@@ -73,10 +73,10 @@ in {
  services.xserver = {
   enable = true;
   enableCtrlAltBackspace = true;
-  videoDrivers = [ "nvidia" ];
-  deviceSection = ''
-    Option "Coolbits" "28"
-  '';
+#  videoDrivers = [ "nvidia" ];
+#  deviceSection = ''
+#    Option "Coolbits" "28"
+#  '';
  };
 
   # Enable Sound
