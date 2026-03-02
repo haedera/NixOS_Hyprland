@@ -36,7 +36,7 @@
 	  net-tools
 
 	# Resin Printer Slicer
-	  lychee
+	  LycheeSlicer
 	  #prusa-slicer
 	
 	# neovim
