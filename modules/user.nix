@@ -32,7 +32,8 @@
 	  man-pages
 	  man-pages-posix
 	  prusa-slicer	
-
+	  net-tools	
+	
 	# neovim
 	  neovim
 	  #citool
