@@ -81,6 +81,7 @@ in {
       "discord"
       "vscode"
       "idea"
+      "lycheeslicer"
     ];  
 
 
