@@ -8,6 +8,7 @@
 	    "libvirtd"
 	    "docker"
 	    "wireshark"
+	    "vboxusers"
     ];
   };
 
@@ -36,13 +37,13 @@
 	  net-tools
 
 	# Resin Printer Slicer
-	  LycheeSlicer
+	  lycheeslicer
 	  #prusa-slicer
 	
 	# neovim
 	  neovim
 	  vscode
-	  jetbrains.idea
+	  jetbrains.idea-community
 	  #citool
 	
 	# Desktop Util
