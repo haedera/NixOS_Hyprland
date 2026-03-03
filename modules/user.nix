@@ -43,7 +43,7 @@
 	# neovim
 	  neovim
 	  vscode
-	  jetbrains.idea-community
+	  jetbrains.idea
 	  #citool
 	
 	# Desktop Util
