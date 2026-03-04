@@ -1,12 +1,8 @@
-{
-  programs.waybar = {
-    enable = true;
+{ ... }:
 
-    settings = {
-      mainBar = {
-        height = 36;
-        spacing = 3;
-      };
-    };
+{
+  programs.waybar.settings.mainBar = {
+    height = 24;
+    spacing = 3;
   };
 }
