@@ -20,16 +20,7 @@
 	  
 	# Generell Util
 	  desktop-file-utils
-	  gcc
-	  python3
-	  jdk21
-	  gdb
-	  cmake
-	  radare2
 	  fastfetch
-	  #ncat
-	  nmap
-	  traceroute
 	  hashcat
 	  zip
 	  unzip
@@ -47,6 +38,20 @@
 	  jetbrains.idea
 	  arduino-ide
 	  #citool
+	
+	# Programming
+	  gcc
+	  python3
+	  jdk21
+	  gdb
+	  cmake
+	  radare2
+
+	# Nettools
+	  nmap
+	  wireshark
+	  traceroute
+	  #ncat
 	
 	# Desktop Util
 	  fuzzel
@@ -71,24 +76,27 @@
 	  proton-pass
 	  protonvpn-gui
 
-	# 'Normal' programs
+	# Browser
 	  brave
 	  firefox
+
+	# Communication Apps
 	  teams-for-linux
 	  discord
 	  signal-desktop
-	  wireshark
-  	  kdePackages.kdenlive
+	  kdePackages.kdenlive
+
+	# Generall Apps
 	  anki
 
-	 # Audio
+	# Audio
 	  pulseaudio            # for pactl, pacmd, etc.
  	  pipewire              # core PipeWire tools
  	  wireplumber           # PipeWire session manager
  	  pavucontrol           # GUI volume control
 	  blueman
 
-	  # Minecraft
+	# Minecraft
           prismlauncher
         
 	# Flatpak (only for Hytale)
