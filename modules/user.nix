@@ -44,6 +44,7 @@
 	  neovim
 	  vscode
 	  jetbrains.idea
+	  arduino-ide
 	  #citool
 	
 	# Desktop Util
@@ -80,9 +81,10 @@
   	  kdePackages.kdenlive
 	  anki
 
-	  # Minecraft
+	# Minecraft
           prismlauncher
-          # Flatpak (only for Hytale)
+        
+	# Flatpak (only for Hytale)
           flatpak
         ];
 #        ++ config.user.packages;
