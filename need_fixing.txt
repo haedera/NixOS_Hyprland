@@ -1,0 +1,3 @@
+lycheeslicer
+jetbrains.idea
+proton-mail

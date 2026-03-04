@@ -21,7 +21,7 @@
   home.file.".config/foot".source = ../config/foot;
   home.file.".config/fuzzel".source = ../config/fuzzel;
   home.file.".config/ghostty".source = ../config/ghostty;
-  home.file.".config/fastfetch".source = ../config/fastfetch;
+  home.file.".config/fastfetch".source = ../config/fastfetch; 
 
     home.packages = with pkgs; [
       font-awesome

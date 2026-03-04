@@ -41,8 +41,8 @@ in {
   # Intel CPU Microcode
   hardware.cpu.intel.updateMicrocode = true;
 
-  # NVIDIA RTX 4090
-  services.xserver.videoDrivers = [ "nvidia" ];
+  # NVIDIA RTX 4090 --> defined a bit below (again)
+  # services.xserver.videoDrivers = [ "nvidia" ];
 
   boot.blacklistedKernelModules = [ "nouveau" ];
 
@@ -57,7 +57,7 @@ in {
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
     # Optional, aber meist sinnvoll:
-    persistence = true;  # hält das NVIDIA-Modul "warm"
+    nvidiaPersistenced = true;  # hält das NVIDIA-Modul "warm"
     powerManagement.enable = true;
 
     prime = {
@@ -69,8 +69,44 @@ in {
     };
   };
 
- services.xserver.enableCtrlAltBackspace = true;
+ 
+ services.xserver = {
+  enable = true;
+  enableCtrlAltBackspace = true;
+  videoDrivers = [ "nvidia" ];
+  deviceSection = ''
+    Option "Coolbits" "28"
+  '';
+ };
 
+  # Enable Sound
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+    wireplumber = {
+      enable = true;
+
+      extraConfig = {
+        "10-default-output" = {
+          "monitor.alsa.rules" = [
+          {
+            matches = [
+              { "node.name" = "alsa_output.pci-0000_00_1f.3.analog-stereo"; }
+            ];
+            actions = {
+              update-props = {
+                "priority.session" = 2000;
+                "priority.driver" = 2000;
+                };
+              };
+            }
+          ];
+        };
+      };
+    };
+  };
 
  boot.kernelParams = [
    "nvidia-drm.modeset=1"
@@ -78,11 +114,11 @@ in {
  ];
 
   #Virtualisierung
-  virtualisation.virtualbox.host.enable = true;
-  virtualisation.virtualbox.host.enableExtensionPack = true;
+#  virtualisation.virtualbox.host.enable = true;
+#  virtualisation.virtualbox.host.enableExtensionPack = true;
   #Fucking VBox
-  environment.extraInit = ''export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"'';
-  programs.dconf.enable = true;
+#  environment.extraInit = ''export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"'';
+#  programs.dconf.enable = true;
   
 
   # OpenGL/Vulkan + 32-bit (Steam)
@@ -96,15 +132,7 @@ in {
     NIXOS_OZONE_WL = "1";
     WLR_NO_HARDWARE_CURSORS = "1";
   };
-  
-  # Sound
-  services.pipewire = {
-     enable = true;
-     alsa.enable = true;
-     alsa.support32Bit = true;
-     pulse.enable = true;
-     wireplumber.enable = true;
-  };   
+    
   
   # Autologin
   services.getty.autologinUser = "kaisel";

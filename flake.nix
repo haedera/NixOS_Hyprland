@@ -27,13 +27,15 @@
 
         		modules = [
       				./hosts/pc/configuration.nix
-				#./hosts/pc/config/hypr/hyprland.conf
-				#./hosts/pc/config/waybar/waybar.jsonc
 				home-manager.nixosModules.home-manager {
 					home-manager = {
 						useGlobalPkgs = true;
 						useUserPackages = true;
-						users.kaisel = import ./modules/home.nix;
+						users.kaisel = {
+							imports = [
+							  ./modules/home.nix
+							];
+						};
 						backupFileExtension = "backup";
 					};
 				}
@@ -48,13 +50,15 @@
 
         		modules = [
           			./hosts/laptop/configuration.nix
-				#./hosts/laptop/config/hypr/hyprland.conf
-				#./hosts/laptop/config/waybar/waybar.jsonc	
 				home-manager.nixosModules.home-manager {
 					home-manager = {
 						useGlobalPkgs = true;
 						useUserPackages = true;
-						users.kaisel = import ./modules/home.nix;
+						users.kaisel = {
+							imports = [
+							  ./modules/home.nix
+							];
+						};
 						backupFileExtension = "backup";
 					};
 				}

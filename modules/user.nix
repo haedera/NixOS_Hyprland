@@ -19,6 +19,7 @@
     [
 	  
 	# Generell Util
+	  desktop-file-utils
 	  gcc
 	  python3
 	  jdk21
@@ -57,7 +58,6 @@
 	  hyprlock
 	  hyprshutdown
 	  pavucontrol
-	  blueman
 	  kdePackages.qtwayland
 	  kdePackages.qtsvg
 	  kdePackages.dolphin
@@ -81,12 +81,18 @@
   	  kdePackages.kdenlive
 	  anki
 
-	# Minecraft
+	 # Audio
+	  pulseaudio            # for pactl, pacmd, etc.
+ 	  pipewire              # core PipeWire tools
+ 	  wireplumber           # PipeWire session manager
+ 	  pavucontrol           # GUI volume control
+	  blueman
+
+	  # Minecraft
           prismlauncher
         
 	# Flatpak (only for Hytale)
           flatpak
         ];
-#        ++ config.user.packages;
 }
 
