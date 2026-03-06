@@ -87,7 +87,7 @@ in {
       "vscode"
       "idea"
       "lycheeslicer"
-      "virtualbox-puel"
+      "virtualbox-extpack"
     ];  
 
 
