@@ -4,7 +4,13 @@
 in {
   users.users.${username} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" "libvirtd" "wireshark" ];
+    extraGroups = [
+      "wheel" 
+      "networkmanager"
+      "docker"
+      "libvirtd"
+      "wireshark"
+    ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -54,6 +60,9 @@ in {
     package32 = hypr-pkgs.pkgsi686Linux.mesa;
   };
 
+  #virtualisation.virtualbox.host.enable = true;
+  #users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
+
   services.xserver.videoDrivers = ["amdgpu"]; # Amazing naming. This is for Xorg and Wayland
 
   # Sound
@@ -76,6 +85,9 @@ in {
       "steam-original"
       "steam-run"
       "discord"
+      "vscode"
+      "idea"
+      "lycheeslicer"
     ];  
 
 

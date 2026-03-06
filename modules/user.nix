@@ -8,7 +8,8 @@
 	    "libvirtd"
 	    "docker"
 	    "wireshark"
-
+	    "vboxusers"
+	    "idea"
     ];
   };
 
@@ -46,8 +47,36 @@
 	  gdb
 	  radare2
 	  jdk21
+	  jetbrains.idea	
+	  net-tools
+
+	# Resin Printer Slicer
+	  lycheeslicer
+	  #prusa-slicer
+	
+	# neovim
+	  neovim
+	  vscode
 	  jetbrains.idea
+	  #jetbrains.idea-community
+	  arduino
+	  #arduino-ide
 	  #citool
+	
+	# Programming
+	  gcc
+	  python3
+	  #python3-gi
+	  jdk21
+	  gdb
+	  cmake
+	  radare2
+
+	# Nettools
+	  nmap
+	  wireshark
+	  traceroute
+	  #ncat
 	
 	# Desktop Util
 	  fuzzel
@@ -62,6 +91,15 @@
 	  kdePackages.qtsvg
 	  kdePackages.dolphin
 
+	# Wallpaper 
+	  #waypaper
+	  #awww
+	  #mpvpaper
+	  #python-imageio
+	  #python-imageio-ffmpeg
+	  #python-screeninfo
+	  #python-platformdirs
+	
 	# Clipboard
 	  wl-clipboard
 	  cliphist
@@ -73,6 +111,7 @@
 
 	# Browser
 	  brave
+	  firefox
 
 	# Communication Apps
 	  teams-for-linux
@@ -83,7 +122,7 @@
 	# Anki
 	  anki
 
-	# Audio and Bluetooth
+	# Audio
 	  pulseaudio            # for pactl, pacmd, etc.
  	  pipewire              # core PipeWire tools
  	  wireplumber           # PipeWire session manager

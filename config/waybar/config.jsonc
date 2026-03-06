@@ -8,9 +8,26 @@
 	"passthrough": false,
 	"gtk-layer-shell": true,
 
-    "modules-left": ["hyprland/workspaces"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["custom/wireguard", "pulseaudio", "battery", "network", "tray", "clock"],
+    "modules-left": [
+	"hyprland/workspaces"
+    ],
+    "modules-center": [
+	"hyprland/window"
+    ],
+    "modules-right": [
+	"custom/wireguard",
+	"pulseaudio",
+	"battery",
+	"network",
+	"tray",
+	"clock",
+	"custom/sep",
+      	"cpu",
+        "custom/sep",
+        "memory",
+        "custom/sep",
+        "disk"
+    ],
 
     "hyprland/window": {
         "separate-outputs": true
@@ -68,6 +85,21 @@
         "format-disconnected": "No internet",
         "tooltip-format": "Gateway: {gwaddr} at {ifname}"
     },
+
+    "cpu": {
+        "format": "CPU: {usage}%",
+        "tooltip": false
+    },
+    
+    "memory": {
+        "format": "Mem: {used}GiB"
+    },
+    
+    "disk": {
+        "interval": 60,
+       "path": "/",
+        "format": "Disk: {free}"
+   },
 
     "tray": {
         "icon-size": 18,

@@ -149,12 +149,16 @@ in {
       "nvidia-x11"
       "nvidia-settings"
       "nvidia-persistenced"
+      "vscode"
+      "idea"
+      "lycheeslicer"
+      #"vboxusers"
     ];  
     
 
   # programs.firefox.enable = true;
 
-  programs.zsh.shellAliases.enxc = "cd ~/NixOS/ && nvim ./hosts/laptop/configuration.nix";
+  programs.zsh.shellAliases.enxc = "cd ~/NixOS/ && nvim ./hosts/pc/configuration.nix";
 
   # Some programs need SUID wrappers, can be configured further or are started in user sessions.
   # programs.mtr.enable = true;

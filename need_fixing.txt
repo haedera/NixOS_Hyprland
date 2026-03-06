@@ -1,0 +1,8 @@
+lycheeslicer
+jetbrains.idea
+	In home.nix there is a possible fix (enables the jetbrains.idea-community edition)
+proton-mail
+Vbox
+UWSM --> either deactivate or fix (waybar issues)
+
+Wallpaper --> Waybar/Hyprland setup 
