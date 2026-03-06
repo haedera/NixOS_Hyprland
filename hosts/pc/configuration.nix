@@ -83,7 +83,7 @@ in {
    enableCtrlAltBackspace = true;
    videoDrivers = [ 
 	"nvidia"
-	"displaylink"
+	# "displaylink" --> X11
    ];
 #  deviceSection = ''
 #    Option "Coolbits" "28"
