@@ -9,6 +9,7 @@
 	    "docker"
 	    "wireshark"
 	    "vboxusers"
+	    "idea"
     ];
   };
 
