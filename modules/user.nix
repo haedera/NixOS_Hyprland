@@ -43,8 +43,8 @@
 	# neovim
 	  neovim
 	  vscode
-	  #jetbrains.idea
-	  jetbrains.idea-community
+	  jetbrains.idea
+	  #jetbrains.idea-community
 	  arduino
 	  #arduino-ide
 	  #citool
