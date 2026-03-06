@@ -4,7 +4,13 @@
 in {
   users.users.${username} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" "libvirtd" "wireshark" ];
+    extraGroups = [
+      "wheel" 
+      "networkmanager"
+      "docker"
+      "libvirtd"
+      "wireshark"
+    ];
   };
 
   environment.systemPackages = with pkgs; [
