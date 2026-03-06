@@ -155,7 +155,7 @@ in {
       "vscode"
       "idea"
       "lycheeslicer"
-      #"vboxusers"
+      "virtualbox-puel"
     ];  
     
 
