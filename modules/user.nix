@@ -44,6 +44,7 @@
 	# Programming
 	  gcc
 	  python3
+	  #python3-gi
 	  jdk21
 	  gdb
 	  cmake
@@ -68,6 +69,15 @@
 	  kdePackages.qtwayland
 	  kdePackages.qtsvg
 	  kdePackages.dolphin
+
+	# Wallpaper 
+	  #waypaper
+	  #awww
+	  #mpvpaper
+	  #python-imageio
+	  #python-imageio-ffmpeg
+	  #python-screeninfo
+	  #python-platformdirs
 	
 	# Clipboard
 	  wl-clipboard
