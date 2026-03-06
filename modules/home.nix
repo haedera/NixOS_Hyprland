@@ -34,7 +34,7 @@
 
       kdePackages.krdc
 
-      jetbrains.idea-community.override
+      # jetbrains.idea-community.override
 
     ];
 
@@ -44,9 +44,4 @@
       QT_QPA_PLATFORM = "xcb";
     };
 
-    # If you’re using the nixpkgs jetbrains wrapper:
-    # home.packages = [
-    #   (pkgs.jetbrains.idea-community.override { /* if your nixpkgs supports overrides */ })
-    # ];
- 
  }
