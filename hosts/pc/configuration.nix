@@ -3,7 +3,15 @@
 in {
   users.users.${username} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" "docker" "libvirtd" "wireshark" ];
+    extraGroups = [ 
+	"wheel"
+	"networkmanager"
+	"docker"
+	"libvirtd"
+	"wireshark"
+	"vboxusers"
+	"idea"
+     ];
   };
 
   environment.systemPackages = with pkgs; [
@@ -71,9 +79,12 @@ in {
 
  
  services.xserver = {
-  enable = true;
-  enableCtrlAltBackspace = true;
-  videoDrivers = [ "nvidia" ];
+   enable = true;
+   enableCtrlAltBackspace = true;
+   videoDrivers = [ 
+	"nvidia"
+	"displaylink"
+   ];
 #  deviceSection = ''
 #    Option "Coolbits" "28"
 #  '';
@@ -108,18 +119,10 @@ in {
     };
   };
 
- boot.kernelParams = [
-   "nvidia-drm.modeset=1"
-   "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
- ];
-
-  #Virtualisierung
-#  virtualisation.virtualbox.host.enable = true;
-#  virtualisation.virtualbox.host.enableExtensionPack = true;
-  #Fucking VBox
-#  environment.extraInit = ''export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"'';
-#  programs.dconf.enable = true;
-  
+  boot.kernelParams = [
+    "nvidia-drm.modeset=1"
+    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+  ];
 
   # OpenGL/Vulkan + 32-bit (Steam)
   hardware.graphics = {
