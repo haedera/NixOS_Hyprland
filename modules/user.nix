@@ -8,6 +8,7 @@
 	    "libvirtd"
 	    "docker"
 	    "wireshark"
+
     ];
   };
 
@@ -19,23 +20,33 @@
 	  
 	# Generell Util
 	  desktop-file-utils
-	  gcc
-	  python3
-	  gdb
-	  radare2
 	  fastfetch
-	# ncat
-	  nmap
-	  traceroute
 	  hashcat
 	  zip
 	  unzip
 	  man-pages
 	  man-pages-posix
-	  prusa-slicer	
+	  tree
+	 
+	# Network tools
+	  traceroute
+	  nmap
+	  #ncat
+	  wireshark
+	  net-tools
 
-	# neovim
+	# 3D-Slicer for my Resin printer
+	  lycheeslicer
+	  #prusa-slicer
+
+	# Programming
+	  python3
 	  neovim
+	  gcc
+	  gdb
+	  radare2
+	  jdk21
+	  jetbrains.idea
 	  #citool
 	
 	# Desktop Util
@@ -50,37 +61,40 @@
 	  kdePackages.qtwayland
 	  kdePackages.qtsvg
 	  kdePackages.dolphin
+
 	# Clipboard
 	  wl-clipboard
 	  cliphist
 	
 	# Proton Util
-	# protonmail-bridge
-	# protonmail-bridge-gui
 	  protonmail-desktop
 	  proton-pass
 	  protonvpn-gui
 
-	  # 'Normal' programs
+	# Browser
 	  brave
+
+	# Communication Apps
 	  teams-for-linux
 	  discord
-	  flatpak
 	  signal-desktop
-	  wireshark
   	  kdePackages.kdenlive
+
+	# Anki
 	  anki
 
-	 # Audio
+	# Audio and Bluetooth
 	  pulseaudio            # for pactl, pacmd, etc.
  	  pipewire              # core PipeWire tools
  	  wireplumber           # PipeWire session manager
  	  pavucontrol           # GUI volume control
 	  blueman
+	  easyeffects
 
-	  # Minecraft
+	# Minecraft
           prismlauncher
-          # Flatpak (only for Hytale)
+
+        # Flatpak (only for Hytale)
           flatpak
         ];
 }
