@@ -4,3 +4,5 @@ jetbrains.idea
 proton-mail
 Vbox
 UWSM --> either deactivate or fix (waybar issues)
+
+Wallpaper --> Waybar/Hyprland setup 
