@@ -33,6 +33,9 @@
       kochi-substitute
 
       kdePackages.krdc
+
+      jetbrains.idea-community.override
+
     ];
 
     home.sessionVariables = {

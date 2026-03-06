@@ -39,26 +39,12 @@
 	# 3D-Slicer for my Resin printer
 	  lycheeslicer
 	  #prusa-slicer
-
-	# Programming
-	  python3
-	  neovim
-	  gcc
-	  gdb
-	  radare2
-	  jdk21
-	  jetbrains.idea	
-	  net-tools
-
-	# Resin Printer Slicer
-	  lycheeslicer
-	  #prusa-slicer
 	
 	# neovim
 	  neovim
 	  vscode
-	  jetbrains.idea
-	  #jetbrains.idea-community
+	  #jetbrains.idea
+	  jetbrains.idea-community
 	  arduino
 	  #arduino-ide
 	  #citool
@@ -72,11 +58,6 @@
 	  cmake
 	  radare2
 
-	# Nettools
-	  nmap
-	  wireshark
-	  traceroute
-	  #ncat
 	
 	# Desktop Util
 	  fuzzel
