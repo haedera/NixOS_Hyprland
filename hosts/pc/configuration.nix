@@ -46,49 +46,61 @@ in {
   networking.hostName = "tom-pc";
   security.rtkit.enable = true;
 
-  # Intel CPU Microcode
+
+  # Intel CPU
   hardware.cpu.intel.updateMicrocode = true;
+  services.thermald.enable = true;
+  powerManagement = {
+    enable = true;
+    cpuFreqGovernor = "powersave";
+  };
 
-  # NVIDIA RTX 4090 --> defined a bit below (again)
-  # services.xserver.videoDrivers = [ "nvidia" ];
 
+  # NVIDIA GPU
   boot.blacklistedKernelModules = [ "nouveau" ];
 
   hardware.nvidia = {
-    modesetting.enable = true;   # wichtig für Wayland
+    modesetting.enable = true;   # for Wayland
     nvidiaSettings = true;
 
-    # Für 4090 empfehlenswert (beste Kompatibilität):
     open = false;
-
-    # Stabiler Treiber aus deinem aktuellen Kernelpaket
     package = config.boot.kernelPackages.nvidiaPackages.stable;
 
-    # Optional, aber meist sinnvoll:
-    nvidiaPersistenced = true;  # hält das NVIDIA-Modul "warm"
+    nvidiaPersistenced = true;
     powerManagement.enable = true;
-
-    prime = {
-      offload.enable = true;
-      offload.enableOffloadCmd = true;
-
-      intelBusId = "PCI:0:2:0";
-      nvidiaBusId = "PCI:1:0:0";
-    };
   };
-
  
- services.xserver = {
-   enable = true;
-   enableCtrlAltBackspace = true;
-   videoDrivers = [ 
+  services.xserver = {
+    enable = true;
+    enableCtrlAltBackspace = true;
+    videoDrivers = [ 
 	"nvidia"
 	# "displaylink" --> X11
    ];
-#  deviceSection = ''
-#    Option "Coolbits" "28"
-#  '';
- };
+  #deviceSection = ''
+  #  Option "Coolbits" "28"
+  #'';
+  };
+
+   boot.kernelParams = [
+    "nvidia-drm.modeset=1"
+    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
+  ];
+
+
+  # OpenGL/Vulkan + 32-bit (Steam)
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+
+  # Wayland/Hyprland
+  environment.sessionVariables = {
+    NIXOS_OZONE_WL = "1";
+    # WLR_NO_HARDWARE_CURSORS = "1";
+  };
+
 
   # Enable Sound
   services.pipewire = {
@@ -99,6 +111,7 @@ in {
     wireplumber = {
       enable = true;
 
+      # Required since the Audio Jack is in the case and therefore not recognized otherwise
       extraConfig = {
         "10-default-output" = {
           "monitor.alsa.rules" = [
@@ -118,27 +131,11 @@ in {
       };
     };
   };
-
-  boot.kernelParams = [
-    "nvidia-drm.modeset=1"
-    "nvidia.NVreg_PreserveVideoMemoryAllocations=1"
-  ];
-
-  # OpenGL/Vulkan + 32-bit (Steam)
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-
-  # Wayland/Hyprland: optionaler Fix, falls Cursor-Flicker o.ä.
-  environment.sessionVariables = {
-    NIXOS_OZONE_WL = "1";
-    WLR_NO_HARDWARE_CURSORS = "1";
-  };
-    
   
+
   # Autologin
   services.getty.autologinUser = "kaisel";
+
 
   # Allow Unfree Packages explicitly
   nixpkgs.config.allowUnfreePredicate = pkg:
@@ -158,8 +155,6 @@ in {
       "virtualbox-extpack"
     ];  
     
-
-  # programs.firefox.enable = true;
 
   programs.zsh.shellAliases.enxc = "cd ~/NixOS/ && nvim ./hosts/pc/configuration.nix";
 
