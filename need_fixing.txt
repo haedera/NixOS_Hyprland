@@ -5,4 +5,6 @@ proton-mail
 Vbox
 UWSM --> either deactivate or fix (waybar issues)
 GOG-Galaxy
-Wallpaper --> Waybar/Hyprland setup 
+Wallpaper --> Waybar/Hyprland setup
+Games
+Resolution fix for games
