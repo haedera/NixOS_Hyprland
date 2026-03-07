@@ -4,5 +4,5 @@ jetbrains.idea
 proton-mail
 Vbox
 UWSM --> either deactivate or fix (waybar issues)
-
+GOG-Galaxy
 Wallpaper --> Waybar/Hyprland setup 
