@@ -1,10 +1,16 @@
-lycheeslicer
-jetbrains.idea
-	In home.nix there is a possible fix (enables the jetbrains.idea-community edition)
-proton-mail
-Vbox
-UWSM --> either deactivate or fix (waybar issues)
-GOG-Galaxy
-Wallpaper --> Waybar/Hyprland setup
-Games
-Resolution fix for games
+To-Do:
+
+	lycheeslicer
+	jetbrains.idea
+	Vbox
+	UWSM --> either deactivate or fix (waybar issues)
+	GOG-Galaxy
+	Wallpaper --> Waybar/Hyprland setup
+	Games
+	Resolution fix for games
+
+"Done":
+
+	proton-mail
+		--> Launch via: "env XDG_SESSION_TYPE=x11 proton-mail"
+	
