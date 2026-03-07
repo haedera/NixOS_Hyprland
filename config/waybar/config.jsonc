@@ -25,6 +25,8 @@
       	"cpu",
         "custom/sep",
         "memory",
+	//"custom/sep",
+	//"gpu",
         "custom/sep",
         "disk"
     ],
@@ -94,6 +96,11 @@
     "memory": {
         "format": "Mem: {used}GiB"
     },
+
+    //"gpu": {
+    //    "format": "GPU: {usage}%",
+    //    "tooltip": false
+    //}, 
     
     "disk": {
         "interval": 60,

@@ -7,10 +7,11 @@ To-Do:
 	GOG-Galaxy
 	Wallpaper --> Waybar/Hyprland setup
 	Games
-	Resolution fix for games
 
 "Done":
 
 	proton-mail
 		--> Launch via: "env XDG_SESSION_TYPE=x11 proton-mail"
+	Resolution fix for games
+		--> Semi done "works on a game per game basis"
 	
