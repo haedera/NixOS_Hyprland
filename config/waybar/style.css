@@ -31,6 +31,9 @@ window#waybar {
 #workspaces button,
 #window,
 #clock,
+#cpu,
+#disk,
+#memory,
 #network,
 #pulseaudio,
 #tray,
@@ -53,7 +56,10 @@ window#waybar {
 #network,
 #tray,
 #battery,
-#clock {
+#clock,
+#cpu,
+#disk,
+#memory{
     border-right: 2px solid @purple;
 }
 
@@ -133,8 +139,8 @@ window#waybar {
 }
 
 #cpu {
-    color: @grn;
-    border-bottom: 4px solid @grn;
+    color: @blu;
+    border-bottom: 4px solid @blu;
 }
 
 
