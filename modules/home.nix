@@ -42,6 +42,7 @@
       JETBRAINS_USE_WAYLAND = "0";
       GDK_BACKEND = "x11";
       QT_QPA_PLATFORM = "xcb";
+      _JAVA_AWT_WM_NONREPARENTING = "1";
     };
 
  }
