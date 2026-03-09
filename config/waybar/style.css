@@ -105,6 +105,22 @@ window#waybar {
     background-color: @bg-highlight;
 }
 
+#disk {
+    color: @ylw;
+    border-bottom: 4px solid @ylw;
+}
+
+#memory {
+    color: @mag;
+    border-bottom: 4px solid @mag;
+}
+
+#cpu {
+    color: @grn;
+    border-bottom: 4px solid @grn;
+}
+
+
 #clock {
     font-weight: bold;
     color: @green;

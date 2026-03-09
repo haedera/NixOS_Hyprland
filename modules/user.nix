@@ -23,11 +23,11 @@
 	  desktop-file-utils
 	  fastfetch
 	  hashcat
+	  #john
 	  zip
 	  unzip
 	  man-pages
-	  man-pages-posix	
-	  net-tools
+	  man-pages-posix
 
 	# Resin Printer Slicer
 	  lycheeslicer
@@ -55,6 +55,7 @@
 	  wireshark
 	  traceroute
 	  #ncat
+	  net-tools
 	
 	# Desktop Util
 	  fuzzel

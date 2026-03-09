@@ -5,4 +5,8 @@ proton-mail
 Vbox
 UWSM --> either deactivate or fix (waybar issues)
 
-Wallpaper --> Waybar/Hyprland setup 
+Wallpaper --> Waybar/Hyprland setup
+
+
+	jetbrains.idea
+		"Temp-fix" "env GTK_IM_MODULE=gtk-im-context-simple QT_IM_MODULE= XMODIFIERS= idea"
