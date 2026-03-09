@@ -28,8 +28,17 @@
 	  unzip
 	  man-pages
 	  man-pages-posix
+	  tree
+	 
+	# Network tools
+	  traceroute
+	  nmap
+	  #ncat
+	  wireshark
+	  net-tools
 
-	# Resin Printer Slicer
+
+	# 3D-Slicer for my Resin printer
 	  lycheeslicer
 	  #prusa-slicer
 	
@@ -39,6 +48,7 @@
 	  jetbrains.idea
 	  #jetbrains.idea-community
 	  arduino
+	  #arduino-ide
 	  #citool
 	
 	# Programming
@@ -49,13 +59,6 @@
 	  gdb
 	  cmake
 	  radare2
-
-	# Nettools
-	  nmap
-	  wireshark
-	  traceroute
-	  #ncat
-	  net-tools
 	
 	# Desktop Util
 	  fuzzel
@@ -66,7 +69,6 @@
 	  hyprsunset
 	  hyprlock
 	  hyprshutdown
-	  pavucontrol
 	  kdePackages.qtwayland
 	  kdePackages.qtsvg
 	  kdePackages.dolphin
@@ -97,9 +99,9 @@
 	  teams-for-linux
 	  discord
 	  signal-desktop
-	  kdePackages.kdenlive
+  	  kdePackages.kdenlive
 
-	# Generall Apps
+	# Anki
 	  anki
 
 	# Audio
@@ -108,11 +110,12 @@
  	  wireplumber           # PipeWire session manager
  	  pavucontrol           # GUI volume control
 	  blueman
+	  easyeffects
 
 	# Minecraft
           prismlauncher
-        
-	# Flatpak (only for Hytale)
+
+        # Flatpak (only for Hytale)
           flatpak
         ];
 }

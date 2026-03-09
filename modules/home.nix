@@ -33,17 +33,16 @@
       kochi-substitute
 
       kdePackages.krdc
+
+      # jetbrains.idea-community.override
+
     ];
 
     home.sessionVariables = {
       JETBRAINS_USE_WAYLAND = "0";
       GDK_BACKEND = "x11";
       QT_QPA_PLATFORM = "xcb";
+      _JAVA_AWT_WM_NONREPARENTING = "1";
     };
 
-    # If you’re using the nixpkgs jetbrains wrapper:
-    # home.packages = [
-    #   (pkgs.jetbrains.idea-community.override { /* if your nixpkgs supports overrides */ })
-    # ];
- 
  }

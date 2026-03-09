@@ -5,6 +5,18 @@
 @define-color purple #c678dd;
 @define-color green #98c379;
 
+@define-color bg    #1a1b26; 
+@define-color fg    #a9b1d6; 
+@define-color blk   #32344a; 
+@define-color red   #f7768e; 
+@define-color grn   #9ece6a; 
+@define-color ylw   #e0af68; 
+@define-color blu   #7aa2f7; 
+@define-color mag   #ad8ee6; 
+@define-color cyn   #0db9d7; 
+@define-color brblk #444b6a; 
+@define-color white #ffffff; 
+
 * {
     font-family: 'JetBrains Mono';
     font-size: 13px;
@@ -19,6 +31,9 @@ window#waybar {
 #workspaces button,
 #window,
 #clock,
+#cpu,
+#disk,
+#memory,
 #network,
 #pulseaudio,
 #tray,
@@ -41,7 +56,10 @@ window#waybar {
 #network,
 #tray,
 #battery,
-#clock {
+#clock,
+#cpu,
+#disk,
+#memory{
     border-right: 2px solid @purple;
 }
 
@@ -85,7 +103,6 @@ window#waybar {
 
     background-color: @bg-highlight;
 
-    /* I hate GTK with a passion */
     background-image: none;
     box-shadow: none;
     transition: none;
@@ -125,3 +142,20 @@ window#waybar {
     font-weight: bold;
     color: @green;
 }
+
+#disk {
+    color: @ylw;
+    border-bottom: 4px solid @ylw;
+}
+
+#memory {
+    color: @mag;
+    border-bottom: 4px solid @mag;
+}
+
+#cpu {
+    color: @blu;
+    border-bottom: 4px solid @blu;
+}
+
+

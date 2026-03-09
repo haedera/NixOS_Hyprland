@@ -10,6 +10,8 @@ in {
       "docker"
       "libvirtd"
       "wireshark"
+      "vboxusers"
+      "idea"
     ];
   };
 
@@ -60,9 +62,6 @@ in {
     package32 = hypr-pkgs.pkgsi686Linux.mesa;
   };
 
-  #virtualisation.virtualbox.host.enable = true;
-  #users.extraGroups.vboxusers.members = [ "user-with-access-to-virtualbox" ];
-
   services.xserver.videoDrivers = ["amdgpu"]; # Amazing naming. This is for Xorg and Wayland
 
   # Sound
@@ -88,6 +87,7 @@ in {
       "vscode"
       "idea"
       "lycheeslicer"
+      "virtualbox-extpack"
     ];  
 
 
