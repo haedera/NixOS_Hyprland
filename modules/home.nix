@@ -33,16 +33,19 @@
       kochi-substitute
 
       kdePackages.krdc
-
-      # jetbrains.idea-community.override
-
     ];
 
+    #home.sessionVariables = {
+    #  JETBRAINS_USE_WAYLAND = "0";
+    #  GDK_BACKEND = "x11";
+    #  QT_QPA_PLATFORM = "xcb";
+    #  _JAVA_AWT_WM_NONREPARENTING = "1";
+    #};
+
     home.sessionVariables = {
-      JETBRAINS_USE_WAYLAND = "0";
-      GDK_BACKEND = "x11";
-      QT_QPA_PLATFORM = "xcb";
-      _JAVA_AWT_WM_NONREPARENTING = "1";
+      GDK_BACKEND = "wayland, x11";
+      QT_QPA_PLATFORM = "wayland, xcb";
+      _JAVA_AWTM_WM_NONREPARENTING "1";
     };
 
  }

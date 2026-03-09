@@ -15,4 +15,6 @@ To-Do:
 		--> Semi done "works on a game per game basis"
 	
 	jetbrains.idea
-		--> Temp-fix "env GTK_IM_MODULE=gtk-im-context-simple QT_IM_MODULE= XMODIFIERS= idea"	
+		--> Temp-fix "env GTK_IM_MODULE=gtk-im-context-simple QT_IM_MODULE= XMODIFIERS= idea"
+
+	(Potenially write a ShellAlias for proton-mail and idea)
