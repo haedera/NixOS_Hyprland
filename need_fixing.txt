@@ -1,11 +1,16 @@
 To-Do:
 
 	lycheeslicer
-	Vbox
 	UWSM --> either deactivate or fix (waybar issues)
 	GOG-Galaxy
 	Wallpaper --> Waybar/Hyprland setup
 	Games
+		--> Binding of Isaac
+		--> Cyberpunk, ...
+	change network interface to Symbols. 
+		--> IP on Hover Upload/Download
+		--> Onclick Upload Download
+	clipboard Symbol	
 
 "Done":
 

@@ -37,6 +37,7 @@ in {
   environment.sessionVariables = {
     # Hint to Electron Apps to use Wayland
     NIXOS_OZONE_WL = "1";
+    #ELECTRON_OZONE_PLATFORM_HINT=x11;
 
     # XDG Variables
     XDG_DESKTOP_DIR = "";

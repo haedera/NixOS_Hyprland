@@ -31,6 +31,7 @@
 	  tree
 	 
 	# Network tools
+	  #mullvad-vpn		#Needs an ".enable = true" to work
 	  traceroute
 	  nmap
 	  #ncat
@@ -42,7 +43,7 @@
 	  lycheeslicer
 	  #prusa-slicer
 	
-	# neovim
+	# IDEs
 	  neovim
 	  vscode
 	  jetbrains.idea
@@ -59,10 +60,12 @@
 	  gdb
 	  cmake
 	  radare2
+	  jupyter-all
 	
 	# Desktop Util
 	  fuzzel
 	  ghostty
+	  libreoffice
 	  bemoji
 	  waybar
 	  hyprshot
@@ -77,6 +80,8 @@
 	  #waypaper
 	  #awww
 	  #mpvpaper
+	  #wallutils
+	  #python3-gobject
 	  #python-imageio
 	  #python-imageio-ffmpeg
 	  #python-screeninfo
