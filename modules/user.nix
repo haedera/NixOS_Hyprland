@@ -29,6 +29,11 @@
 	  man-pages
 	  man-pages-posix
 	  tree
+
+	# Resource - Monitoring
+	  #lm-sensors
+	  #psutil
+	  #nvidia-smi
 	 
 	# Network tools
 	  #mullvad-vpn		#Needs an ".enable = true" to work
@@ -56,6 +61,7 @@
 	  gcc
 	  python3
 	  #python3-gi
+	  pwntools	# Python3 pwntools
 	  jdk21
 	  gdb
 	  cmake
