@@ -67,11 +67,15 @@
 	  cmake
 	  radare2
 	  jupyter-all
-	
+
+	# Text- Editor
+	  texstudio
+    	  texliveFull
+	  libreoffice
+
 	# Desktop Util
 	  fuzzel
 	  ghostty
-	  libreoffice
 	  bemoji
 	  waybar
 	  hyprshot
