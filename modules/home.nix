@@ -43,8 +43,8 @@
     #};
 
     home.sessionVariables = {
-      GDK_BACKEND = "wayland, x11";
-      QT_QPA_PLATFORM = "wayland; xcb";
+      GDK_BACKEND = "wayland,x11";
+      QT_QPA_PLATFORM = "wayland;xcb";
       _JAVA_AWT_WM_NONREPARENTING = "1";
     };
 

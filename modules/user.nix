@@ -59,8 +59,14 @@
 	
 	# Programming
 	  gcc
-	  python3
+	  #python3
 	  #python3-gi
+	  (pkgs.python3.withPackages (ps: with ps; [
+  	     ipykernel
+  	     numpy
+ 	     pandas
+ 	     pwntools
+  	  ]))
 	  pwntools	# Python3 pwntools
 	  jdk21
 	  gdb
