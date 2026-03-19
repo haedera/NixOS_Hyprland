@@ -66,13 +66,14 @@
   	     numpy
  	     pandas
  	     pwntools
+	     jupyter-all
   	  ]))
-	  pwntools	# Python3 pwntools
+	  #pwntools	# Python3 pwntools
 	  jdk21
 	  gdb
 	  cmake
 	  radare2
-	  jupyter-all
+	  #jupyter-all
 
 	# Text- Editor
 	  texstudio
