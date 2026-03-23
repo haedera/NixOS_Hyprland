@@ -62,7 +62,7 @@
 	  #python3
 	  #python3-gi
 	  (pkgs.python3.withPackages (ps: with ps; [
-  	     ipykernel
+  	     #ipykernel
   	     numpy
  	     pandas
  	     pwntools
