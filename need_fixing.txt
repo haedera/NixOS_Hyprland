@@ -10,7 +10,9 @@ To-Do:
 	change network interface to Symbols. 
 		--> IP on Hover Upload/Download
 		--> Onclick Upload Download
-	clipboard Symbol	
+	clipboard Symbol
+	Heroic game launcher
+	Python fix
 
 "Done":
 

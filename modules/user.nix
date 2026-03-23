@@ -36,7 +36,7 @@
 	  #nvidia-smi
 	 
 	# Network tools
-	  #mullvad-vpn		#Needs an ".enable = true" to work
+	  #mullvad-vpn		# Needs an ".enable = true" to work
 	  traceroute
 	  nmap
 	  #ncat
@@ -67,7 +67,7 @@
  	     pandas
  	     pwntools
   	  ]))
-	  pwntools	# Python3 pwntools
+	  #pwntools		# Python3 pwntools
 	  jdk21
 	  gdb
 	  cmake
@@ -133,11 +133,10 @@
 	  blueman
 	  easyeffects
 
-	# Minecraft
+	# Launchers (mostly used for games)
           prismlauncher
-
-        # Flatpak (only for Hytale)
-          flatpak
+	  heroic
+          flatpak 		# for Hytale
         ];
 }
 
