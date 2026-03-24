@@ -25,3 +25,9 @@ To-Do:
 		--> Temp-fix "env GTK_IM_MODULE=gtk-im-context-simple QT_IM_MODULE= XMODIFIERS= idea"
 
 	(Potenially write a ShellAlias for proton-mail and idea)
+
+
+
+	Pootential-fix (lycheeslicer)
+		env | grep -E '^(GTK_IM_MODULE|QT_IM_MODULE|XMODIFIERS|SDL_IM_MODULE|GLFW_IM_MODULE|INPUT_METHOD)='
+GTK_IM_MODULE=xim QT_IM_MODULE=xim XMODIFIERS=@im=none env -u NIXOS_OZONE_WL lycheeslicer --ozone-platform=x11 --no-sandbox --disable-gpu
