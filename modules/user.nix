@@ -138,6 +138,7 @@
           prismlauncher
           flatpak		# for Hytale
 	  #nexusmods-app
+	  heroic
         ];
 }
 
