@@ -137,7 +137,7 @@
 	# Game-launchers
           prismlauncher
           flatpak		# for Hytale
-	  nexusmods-app
+	  #nexusmods-app
         ];
 }
 
