@@ -11,7 +11,11 @@ To-Do:
 		--> IP on Hover Upload/Download
 		--> Onclick Upload Download
 	clipboard Symbol	
-
+	Coding-Standards
+		Python
+		Java
+		C
+	
 "Done":
 
 	proton-mail

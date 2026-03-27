@@ -61,7 +61,7 @@
 	  gcc
 	  python3
 	  #python3-gi
-	  #(pkgs.python3.withPackages (ps: with ps; [
+	  #(pkgs.python3.withPackages (ps: with ps; [	# failed attempt at adding extensions without pip
   	  #   #ipykernel
   	  #   numpy
  	  #   pandas
@@ -134,11 +134,10 @@
 	  blueman
 	  easyeffects
 
-	# Minecraft
+	# Game-launchers
           prismlauncher
-
-        # Flatpak (only for Hytale)
-          flatpak
+          flatpak		# for Hytale
+	  nexusmods-app
         ];
 }
 
