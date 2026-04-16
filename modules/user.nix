@@ -112,7 +112,7 @@
 	# Proton Util
 	  protonmail-desktop
 	  proton-pass
-	  protonvpn-gui
+	  proton-vpn	# outdated: protonvpn-gui
 
 	# Browser
 	  brave
