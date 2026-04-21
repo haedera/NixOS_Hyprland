@@ -71,10 +71,14 @@
   	  #]))
 	  pwntools	# Python3 pwntools
 	  jdk21
-	  gdb
 	  cmake
-	  radare2
 	  jupyter-all
+
+	# Programm-Monitoring
+	  imhex
+	  radare2
+	  gdb
+
 
 	# Text- Editor
 	  texstudio
