@@ -29,6 +29,7 @@
 	  man-pages
 	  man-pages-posix
 	  tree
+	  imagemagick	#Convert image to bitmap
 
 	# Resource - Monitoring	# Possibly needed once i implement a resource monitoring app (for waybar?)
 	  #lm-sensors
@@ -53,7 +54,7 @@
 	  neovim
 	  vscode
 	  jetbrains.idea
-	  #jetbrains.idea-community
+	  #jetbrains.idea-community	#stopped working once version changed from 25.11 to 26.xx
 	  arduino
 	  #arduino-ide		# unupported/wrong version (won't start/crashes immediatly)
 	  #citool
@@ -73,6 +74,7 @@
 	  jdk21
 	  cmake
 	  jupyter-all
+	  #qemu
 
 	# Programm-Monitoring
 	  imhex
