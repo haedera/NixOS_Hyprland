@@ -59,21 +59,22 @@
 	
 	# Programming
 	  gcc
-	  #python3
 	  #python3-gi
-	  (pkgs.python3.withPackages (ps: with ps; [
+	  #(pkgs.python3.withPackages (ps: with ps; [
   	     #ipykernel
-  	     numpy
- 	     pandas
- 	     pwntools
-	     jupyter-all
-  	  ]))
+  	     #numpy
+ 	     #pandas
+ 	     #pwntools
+	     #jupyter-all
+  	  #]))
+	  python3
+	  #python3-gi
 	  #pwntools		# Python3 pwntools
 	  jdk21
 	  gdb
 	  cmake
 	  radare2
-	  #jupyter-all
+	  jupyter-all
 
 	# Text- Editor
 	  texstudio
