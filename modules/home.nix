@@ -16,7 +16,10 @@
 	'';
   };
 
-  home.file.".config/hypr".source = ../config/hypr;
+  #xsession.enable = true;
+  #xsession.windowManager.command = "...";
+
+  home.file.".config/hypr".source = ../config/hypr;		# Doesn't use the hyprlock file
   home.file.".config/waybar".source = ../config/waybar;
   home.file.".config/foot".source = ../config/foot;
   home.file.".config/fuzzel".source = ../config/fuzzel;

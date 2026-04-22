@@ -62,7 +62,9 @@ in {
     package32 = hypr-pkgs.pkgsi686Linux.mesa;
   };
 
+  # Services set / enable
   services.xserver.videoDrivers = ["amdgpu"]; # Amazing naming. This is for Xorg and Wayland
+  #services.xserver.enable = true;
 
   # Sound
   services.pipewire = {
@@ -74,7 +76,7 @@ in {
   };   
   
   # Autologin
-  services.getty.autologinUser = "kaisel";
+  services.getty.autologinUser = "kaisel";		# Needs a rework -> possible workaround for the login exists
 
   # Allow Unfree Packages explicitly
   nixpkgs.config.allowUnfreePredicate = pkg:

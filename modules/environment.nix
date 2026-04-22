@@ -3,6 +3,9 @@
   # networkmanager
   networking.networkmanager.enable = true;
 
+  # Hyprlock
+  security.pam.services.hyprlock = {};
+
   # time zone
   time.timeZone = "Europe/Vienna";
 

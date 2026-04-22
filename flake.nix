@@ -9,13 +9,17 @@
     	};
 	home-manager = {
 		url = "github:nix-community/home-manager";
+		# url = "github:nix-community/home-manager/release-25.11";
 		inputs.nixpkgs.follows = "nixpkgs";
 	};
   };
 	
   outputs = { self, nixpkgs, home-manager, hyprland, ...}: let
+     #homeConfigurations."yourusername" = home-manager.lib.homeManagerConfiguration {
 	system = "x86_64-linux";
 	pkgs = nixpkgs.legacyPackages.${system};
+	# modules = [ ./home.nix ];
+     #}
   in {
 	nixosConfigurations = {
 	

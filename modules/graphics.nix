@@ -44,7 +44,7 @@ in {
     XDG_DOWNLOAD_DIR = "$HOME/Downloads";
     XDG_TEMPLATES_DIR = "";
     XDG_PUBLICSHARE_DIR = "";
-    XDG_DOCUMENTS_DIR = "";
+    XDG_DOCUMENTS_DIR = "$HOME/Documents";
     XDG_MUSIC_DIR = "";
     XDG_PICTURES_DIR = "$HOME/Pictures";
     XDG_VIDEOS_DIR = "";

@@ -10,9 +10,15 @@ To-Do:
 	change network interface to Symbols. 
 		--> IP on Hover Upload/Download
 		--> Onclick Upload Download
-	clipboard Symbol
-	Heroic game launcher
-	Python fix
+
+	clipboard Symbol	
+	Coding-Standards
+		Python
+		Java
+		C
+	either properly implement "home-manager" -> https://nix-community.github.io/home-manager/index.xhtml#sec-usage-configuration
+		or delete all references to the home manager and implement d-hains workaround
+		-> also change dotfiles to actually start with a dot
 
 "Done":
 

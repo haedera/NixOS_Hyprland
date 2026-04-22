@@ -30,10 +30,11 @@
 	  man-pages-posix
 	  tree
 
-	# Resource - Monitoring
+	# Resource - Monitoring	# Possibly needed once i implement a resource monitoring app (for waybar?)
 	  #lm-sensors
 	  #psutil
 	  #nvidia-smi
+	  #btop
 	 
 	# Network tools
 	  #mullvad-vpn		# Needs an ".enable = true" to work
@@ -45,8 +46,8 @@
 
 
 	# 3D-Slicer for my Resin printer
-	  lycheeslicer
-	  #prusa-slicer
+	  lycheeslicer		# requires a wrapper and environment variables to launch (Unable to login due to browser needing to launch it after Verifying)
+	  #prusa-slicer		# doesn't support my 3D Printer
 	
 	# IDEs
 	  neovim
@@ -54,27 +55,34 @@
 	  jetbrains.idea
 	  #jetbrains.idea-community
 	  arduino
-	  #arduino-ide
+	  #arduino-ide		# unupported/wrong version (won't start/crashes immediatly)
 	  #citool
 	
 	# Programming
 	  gcc
 	  #python3-gi
-	  #(pkgs.python3.withPackages (ps: with ps; [
-  	     #ipykernel
-  	     #numpy
- 	     #pandas
- 	     #pwntools
-	     #jupyter-all
-  	  #]))
+	  #pwntools
 	  python3
-	  #python3-gi
-	  #pwntools		# Python3 pwntools
+	  #python3-gi		# throws an error while compiling
+	  #(pkgs.python3.withPackages (ps: with ps; [	# failed attempt at adding extensions without pip
+  	  #   #ipykernel
+  	  #   numpy
+ 	  #   pandas
+ 	  #   pwntools
+	  #   jupyter-all
+  	  #]))
+	  pwntools	# Python3 pwntools
+
 	  jdk21
-	  gdb
 	  cmake
+	  jupyter-all
+
+	# Programm-Monitoring
+	  imhex
 	  radare2
 	  jupyter-all
+	  gdb
+
 
 	# Text- Editor
 	  texstudio
@@ -94,7 +102,7 @@
 	  kdePackages.qtsvg
 	  kdePackages.dolphin
 
-	# Wallpaper 
+	# Wallpaper 	# Future expansion for Hyprland ricing (needs a proper tutorial)	--> also need to do neovim ricing
 	  #waypaper
 	  #awww
 	  #mpvpaper
@@ -112,7 +120,7 @@
 	# Proton Util
 	  protonmail-desktop
 	  proton-pass
-	  protonvpn-gui
+	  proton-vpn	# outdated: protonvpn-gui
 
 	# Browser
 	  brave
@@ -137,8 +145,9 @@
 
 	# Launchers (mostly used for games)
           prismlauncher
+          flatpak		# for Hytale
+	  #nexusmods-app
 	  heroic
-          flatpak 		# for Hytale
-        ];
+
 }
 
