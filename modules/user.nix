@@ -72,7 +72,6 @@
 	  #   jupyter-all
   	  #]))
 	  pwntools	# Python3 pwntools
-
 	  jdk21
 	  cmake
 	  jupyter-all
@@ -148,6 +147,6 @@
           flatpak		# for Hytale
 	  #nexusmods-app
 	  heroic
-
+	  protonplus		# for more specific proton interface fixes for certain games
+  ];
 }
-
