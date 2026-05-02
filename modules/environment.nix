@@ -3,6 +3,14 @@
   # networkmanager
   networking.networkmanager.enable = true;
 
+  #firewall
+  networking.firewall = {
+    enable = true;
+    allowPing = false;
+    allowedTCPPorts = [ ];
+    logRefusedConnections = true;
+  };
+
   # Hyprlock
   security.pam.services.hyprlock = {};
 

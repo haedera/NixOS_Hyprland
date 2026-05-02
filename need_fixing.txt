@@ -32,3 +32,13 @@ To-Do:
 		--> Temp-fix "env GTK_IM_MODULE=gtk-im-context-simple QT_IM_MODULE= XMODIFIERS= idea"
 
 	(Potenially write a ShellAlias for proton-mail and idea)
+
+
+
+Implement new Hyprland.lua syntax:
+Fix Home-manager/implement correctly (with the multiple Host sreen setup)
+Remove UWSM
+Fix Autogreeter
+Fix Hyprlock
+Fix Filepath and name dotfiles with a '.'
+Proper and synchronous file/codelayout

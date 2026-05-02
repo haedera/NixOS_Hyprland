@@ -41,10 +41,11 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("nm-applet")
     hl.exec_cmd("waybar & hyprpaper & brave")
     hl.exev_cmd("protonvpn-app")
-    hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme "Tokyo-Night-Dark"")
-    hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"")
+    
+    --hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme "Tokyo-Night-Dark"")
+    --hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme "prefer-dark"")
 
-    hl.exec_cmd("env -u DISPLAY GDK_BACKEND=wayland waybar -c ~/nixos-dotfiles/config/waybar/config.jsonc -s ~/nixos-dotfiles/config/waybar/style.css")
+    --hl.exec_cmd("env -u DISPLAY GDK_BACKEND=wayland waybar -c ~/nixos-dotfiles/config/waybar/config.jsonc -s ~/nixos-dotfiles/config/waybar/style.css")
 end)
 
 
@@ -54,8 +55,9 @@ end)
 
 -- See https://wiki.hypr.land/Configuring/Advanced-and-Cool/Environment-variables/
 
-hl.env("GTK_THEME,Tokyo-Night-Dark")
-hl.env ("GTK_ICON_THEME,Adwaita")
+hl.env("GTK_THEME,Tokyo-Night-Dark")		--also: Tokyo-Night | TokyoNight-Dark | tokyo-night-gtk
+hl.env("GTK_ICON_THEME,Adwaita")
+hl.env("GTK_APPLICATION_PREFER_DARK_THEME,1")
 
 hl.env("XCURSOR_SIZE,20")
 hl.env("HYPRCURSOR_SIZE,20")
