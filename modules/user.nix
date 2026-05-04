@@ -42,7 +42,7 @@
 	  traceroute
 	  nmap
 	  #ncat
-	  wireshark
+	  ##wireshark
 	  net-tools
 
 

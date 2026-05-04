@@ -9,9 +9,9 @@
   };
 
  # Wireshark
-  programs.wireshark = {
-	enable = true;
-  };
+#  programs.wireshark = {
+#	enable = true;
+#  };
 
  # Proton-Mail
   environment.systemPackages = [ pkgs.protonmail-desktop ];
