@@ -38,7 +38,7 @@
 	  #btop
 	 
 	# Network tools
-	  #mullvad-vpn		#Needs an ".enable = true" to work
+	  #mullvad-vpn		# Needs an ".enable = true" to work
 	  traceroute
 	  nmap
 	  #ncat
@@ -61,6 +61,8 @@
 	
 	# Programming
 	  gcc
+	  #python3-gi
+	  #pwntools
 	  python3
 	  #python3-gi		# throws an error while compiling
 	  #(pkgs.python3.withPackages (ps: with ps; [	# failed attempt at adding extensions without pip
@@ -79,6 +81,7 @@
 	# Programm-Monitoring
 	  imhex
 	  radare2
+	  jupyter-all
 	  gdb
 
 
@@ -141,11 +144,11 @@
 	  blueman
 	  easyeffects
 
-	# Game-launchers
+	# Launchers (mostly used for games)
           prismlauncher
           flatpak		# for Hytale
 	  #nexusmods-app
 	  heroic
-        ];
+	  protonplus		# for more specific proton interface fixes for certain games
+  ];
 }
-

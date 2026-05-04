@@ -10,6 +10,7 @@ To-Do:
 	change network interface to Symbols. 
 		--> IP on Hover Upload/Download
 		--> Onclick Upload Download
+
 	clipboard Symbol	
 	Coding-Standards
 		Python
@@ -18,8 +19,6 @@ To-Do:
 	either properly implement "home-manager" -> https://nix-community.github.io/home-manager/index.xhtml#sec-usage-configuration
 		or delete all references to the home manager and implement d-hains workaround
 		-> also change dotfiles to actually start with a dot
-
-
 
 "Done":
 
@@ -35,6 +34,7 @@ To-Do:
 
 
 
+
 Implement new Hyprland.lua syntax:
 Fix Home-manager/implement correctly (with the multiple Host sreen setup)
 Remove UWSM
@@ -42,3 +42,7 @@ Fix Autogreeter
 Fix Hyprlock
 Fix Filepath and name dotfiles with a '.'
 Proper and synchronous file/codelayout
+
+Pootential-fix (lycheeslicer)
+		env | grep -E '^(GTK_IM_MODULE|QT_IM_MODULE|XMODIFIERS|SDL_IM_MODULE|GLFW_IM_MODULE|INPUT_METHOD)='
+GTK_IM_MODULE=xim QT_IM_MODULE=xim XMODIFIERS=@im=none env -u NIXOS_OZONE_WL lycheeslicer --ozone-platform=x11 --no-sandbox --disable-gpu
