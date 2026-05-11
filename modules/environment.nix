@@ -2,6 +2,7 @@
 {
   # networkmanager
   networking.networkmanager.enable = true;
+  services.openssh.enable = false;
 
   #firewall
   networking.firewall = {
@@ -10,7 +11,7 @@
     allowedTCPPorts = [ ];
     logRefusedConnections = true;
   };
-
+  
   # Hyprlock
   security.pam.services.hyprlock = {};
 
@@ -28,8 +29,9 @@
   environment.systemPackages = with pkgs; [
     tree
     wget
-    kitty
     waybar
+    kitty
+    ghostty
     foot
     hyprpaper
     zip

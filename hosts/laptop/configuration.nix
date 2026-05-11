@@ -47,15 +47,7 @@ in {
   # Network stuff
   networking.hostName = "tom-laptop";
   security.rtkit.enable = true;
-  services.openssh.enable = false;
 
-  # Firewall
-  networking.firewall = {
-    enable = true;
-    allowPing = false;
-    allowedTCPPorts = [ ];
-    logRefusedConnections = true;
-  };
   
   # Graphics
   hardware.graphics = {

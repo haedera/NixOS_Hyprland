@@ -8,12 +8,15 @@
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 -- multiple host setup? -> home-manager
-hl.monitor({
-    output   = "",
-    mode     = "preferred",
-    position = "auto",
-    scale    = "auto",
-})
+--
+--source = 
+--
+--hl.monitor({
+--    output   = "",
+--    mode     = "preferred",
+--    position = "auto",
+--    scale    = "auto",
+--})
 
 
 ---------------------
@@ -21,7 +24,7 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    	= "kitty"
+local terminal    	= "kitty" -- "ghostyy" ......
 --local terminal		= "foot"	-- previously used foot (is too lightweight)
 local fileManager 	= "dolphin"
 local menu        	= "hyprlauncher"

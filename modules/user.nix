@@ -32,10 +32,10 @@
 	  imagemagick	#Convert image to bitmap
 
 	# Resource - Monitoring	# Possibly needed once i implement a resource monitoring app (for waybar?)
-	  #lm-sensors
-	  #psutil
-	  #nvidia-smi
-	  #btop
+	  lm-sensors
+	  psutil
+	  nvidia-smi
+	  btop
 	 
 	# Network tools
 	  #mullvad-vpn		# Needs an ".enable = true" to work

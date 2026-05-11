@@ -46,15 +46,6 @@ in {
   # Network stuff
   networking.hostName = "tom-pc";
   security.rtkit.enable = true;
-  services.openssh.enable = false;
-
-  # Firewall
-  networking.firewall = {
-    enable = true;
-    allowPing = false;
-    allowedTCPPorts = [ ];
-    logRefusedConnections = true;
-  };
 
 
   # Intel CPU
