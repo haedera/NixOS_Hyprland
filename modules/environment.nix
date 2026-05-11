@@ -2,10 +2,10 @@
 {
   # networkmanager
   networking.networkmanager.enable = true;
-  services.openssh.enable = false;
+  #services.openssh.enable = false; --> in services.nix
 
   #firewall
-  networking.firewall = {
+  networking.nftables.firewall = {
     enable = true;
     allowPing = false;
     allowedTCPPorts = [ ];

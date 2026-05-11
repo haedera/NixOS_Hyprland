@@ -31,10 +31,10 @@
 	  tree
 	  imagemagick	#Convert image to bitmap
 
-	# Resource - Monitoring	# Possibly needed once i implement a resource monitoring app (for waybar?)
-	  lm-sensors
-	  psutil
-	  nvidia-smi
+	# Resource - Monitoring	# Possibly needed once I implement a resource monitoring app (for waybar?)
+	  #lm-sensors
+	  #psutil
+	  #nvidia-smi
 	  btop
 	 
 	# Network tools
