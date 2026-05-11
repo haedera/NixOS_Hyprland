@@ -39,6 +39,7 @@ in {
       ../../modules/user.nix
       # ../../modules/nix.vim
       # ../../modules/home.nix
+      # ../../modules/home_laptop.nix
       ../../git_config/gitconfig.nix
       # ../../.ssh
     ];
@@ -46,6 +47,15 @@ in {
   # Network stuff
   networking.hostName = "tom-laptop";
   security.rtkit.enable = true;
+  services.openssh.enable = false;
+
+  # Firewall
+  networking.firewall = {
+    enable = true;
+    allowPing = false;
+    allowedTCPPorts = [ ];
+    logRefusedConnections = true;
+  };
   
   # Graphics
   hardware.graphics = {
@@ -76,7 +86,7 @@ in {
   };   
   
   # Autologin
-  services.getty.autologinUser = "kaisel";		# Needs a rework -> possible workaround for the login exists
+  #services.getty.autologinUser = "kaisel";		# Needs a rework -> possible workaround for the login exists
 
   # Allow Unfree Packages explicitly
   nixpkgs.config.allowUnfreePredicate = pkg:

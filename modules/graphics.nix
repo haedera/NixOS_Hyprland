@@ -16,7 +16,7 @@ in {
   # Hyprland settings 
   programs.hyprland = {
     enable = true;
-    withUWSM = true;  # Enables UWSM integration
+    withUWSM = false;  # Disable UWSM integration
     xwayland.enable = true;
 
     package = hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;

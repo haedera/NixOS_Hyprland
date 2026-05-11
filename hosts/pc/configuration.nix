@@ -38,6 +38,7 @@ in {
       ../../modules/user.nix
       # ../../modules/nix.vim
       # ../../modules/home.nix
+      # ../../modules/home_pc.nix
       ../../git_config/gitconfig.nix
       # ../../.ssh
     ];
@@ -45,6 +46,15 @@ in {
   # Network stuff
   networking.hostName = "tom-pc";
   security.rtkit.enable = true;
+  services.openssh.enable = false;
+
+  # Firewall
+  networking.firewall = {
+    enable = true;
+    allowPing = false;
+    allowedTCPPorts = [ ];
+    logRefusedConnections = true;
+  };
 
 
   # Intel CPU
@@ -134,7 +144,7 @@ in {
   
 
   # Autologin
-  services.getty.autologinUser = "kaisel";
+  #services.getty.autologinUser = "kaisel";
 
 
   # Allow Unfree Packages explicitly
