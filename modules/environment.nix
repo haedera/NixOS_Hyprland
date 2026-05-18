@@ -36,7 +36,7 @@
     hyprpaper
     zip
     unzip
-    nvim
+    vim
     git
     qemu
   ];
