@@ -5,7 +5,7 @@
   #services.openssh.enable = false; --> in services.nix
 
   #firewall
-  networking.nftables.firewall = {
+  networking.firewall = {
     enable = true;
     allowPing = false;
     allowedTCPPorts = [ ];
@@ -36,8 +36,9 @@
     hyprpaper
     zip
     unzip
-    vim
+    nvim
     git
+    qemu
   ];
   
 }

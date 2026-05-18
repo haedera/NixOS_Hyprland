@@ -37,11 +37,11 @@ in {
       ../../modules/nix_settings.nix
       ../../modules/wireshark.nix
       ../../modules/user.nix
-      # ../../modules/nix.vim
+      # ../../modules/env_graph_hardware.nix
+      # ../../modules/prog_serv_wire.nix
       # ../../modules/home.nix
       # ../../modules/home_laptop.nix
       ../../git_config/gitconfig.nix
-      # ../../.ssh
     ];
 
   # Network stuff
@@ -66,7 +66,7 @@ in {
 
   # Services set / enable
   services.xserver.videoDrivers = ["amdgpu"]; # Amazing naming. This is for Xorg and Wayland
-  #services.xserver.enable = true;
+  services.xserver.enable = true;
 
   # Sound
   services.pipewire = {

@@ -30,6 +30,7 @@
 	  man-pages-posix
 	  tree
 	  imagemagick	#Convert image to bitmap
+	  xkeyboard_config
 
 	# Resource - Monitoring	# Possibly needed once I implement a resource monitoring app (for waybar?)
 	  #lm-sensors
@@ -49,6 +50,7 @@
 	# 3D-Slicer for my Resin printer
 	  lycheeslicer		# requires a wrapper and environment variables to launch (Unable to login due to browser needing to launch it after Verifying)
 	  #prusa-slicer		# doesn't support my 3D Printer
+	  orca-slicer
 	
 	# IDEs
 	  neovim
@@ -76,7 +78,7 @@
 	  jdk21
 	  cmake
 	  jupyter-all
-	  #qemu
+	  qemu
 
 	# Programm-Monitoring
 	  imhex

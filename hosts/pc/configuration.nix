@@ -36,6 +36,8 @@ in {
       ../../modules/nix_settings.nix
       ../../modules/wireshark.nix
       ../../modules/user.nix
+      # ../../modules/env_graph_hardware.nix
+      # ../../modules/prog_serv_wire.nix
       # ../../modules/nix.vim
       # ../../modules/home.nix
       # ../../modules/home_pc.nix
@@ -46,6 +48,7 @@ in {
   # Network stuff
   networking.hostName = "tom-pc";
   security.rtkit.enable = true;
+  services.xserver.enable = true;
 
 
   # Intel CPU
