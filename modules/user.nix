@@ -8,7 +8,8 @@
 	    "libvirtd"
 	    "docker"
 	    "wireshark"
-	    "vboxusers"
+	    "kvm"
+	    #"vboxusers"
 	    "idea"
     ];
   };
@@ -91,6 +92,7 @@
 	  texstudio
     	  texliveFull
 	  libreoffice
+	  xournalapp
 
 	# Desktop Util
 	  fuzzel

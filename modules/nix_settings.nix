@@ -16,4 +16,10 @@
   };
 
   # needs changes / requires adaptation
+ 
+  #nix.-------
+  #deletes all but the 10 newest Generations of my nix config
+  #delete the backlog of nearly 90 generations
+
+
 }

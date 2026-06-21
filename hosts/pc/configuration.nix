@@ -9,7 +9,7 @@ in {
 	"docker"
 	"libvirtd"
 	"wireshark"
-	"vboxusers"
+#	"vboxusers"
 	"idea"
      ];
   };
@@ -156,7 +156,7 @@ in {
       "vscode"
       "idea"
       "lycheeslicer"
-      "virtualbox-extpack"
+      #"virtualbox-extpack"
     ];  
     
 

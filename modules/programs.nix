@@ -21,12 +21,12 @@
   programs.virt-manager.enable = true;
  
  #Virtualisierung
-   virtualisation.virtualbox.host.enable = true;
-   virtualisation.virtualbox.host.enableExtensionPack = true;
-   environment.extraInit = ''
-     export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
-   '';
-   programs.dconf.enable = true;
+ #  virtualisation.virtualbox.host.enable = true;
+ #  virtualisation.virtualbox.host.enableExtensionPack = true;
+ #  environment.extraInit = ''
+ #    export XDG_DATA_DIRS="$XDG_DATA_DIRS:${pkgs.gtk3}/share/gsettings-schemas/${pkgs.gtk3.name}"
+ #  '';
+ #  programs.dconf.enable = true;
 
  # Docker
   virtualisation.docker = {

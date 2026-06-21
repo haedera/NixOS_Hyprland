@@ -24,8 +24,8 @@
 ---------------------
 
 -- Set programs that you use
-local terminal    	= "kitty" -- "ghostyy" ......
---local terminal		= "foot"	-- previously used foot (is too lightweight)
+local terminal    	= "foot" -- "ghostyy" ......
+--local terminal		= "foot"	-- previously used ghostty (looks kynda weird, exspecialla nvim colourlooks kynda weird, exspecialla nvim colourss)
 local fileManager 	= "dolphin"
 local menu        	= "hyprlauncher"
 local reload_waybar	= "pkill waybar; waybar &"
@@ -214,7 +214,7 @@ hl.config({
         kb_layout  = "de",
         kb_variant = "",
         kb_model   = "nodeadkeys",
-        kb_options = "",
+        kb_options = "105",
         kb_rules   = "",
 
         follow_mouse = 1,
