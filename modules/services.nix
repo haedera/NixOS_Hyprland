@@ -49,4 +49,10 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+
+  # enable gamescope to fix some issues with Linux support from steam games (mostly scaling issues)
+  programs.gamescope = {
+    enable = true;
+};
 }

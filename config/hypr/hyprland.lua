@@ -1,0 +1,276 @@
+local conf = require("conf")
+
+-- Monitors
+
+hl.monitor({
+    output   = "DP-3",
+    mode     = "2560x1440@180",
+    position = "0x0",
+    scale    = 1,
+    bitdepth = 8,
+    cm       = "auto",
+})
+
+hl.monitor({
+    output   = "HDMI-A-1",
+    mode     = "1920x1080@120",
+    position = "2560x0",
+    scale    = 1,
+    bitdepth = 8,
+    cm       = "auto",
+})
+
+hl.monitor({
+    output   = "DP-2",
+    mode     = "3840x1100@60",
+    position = "-1100x0",
+    scale    = 1,
+    bitdepth = 8,
+    cm       = "auto",
+    transform = 3,
+})
+
+-- Workspaces
+
+hl.workspace_rule({
+    workspace = "1",
+    monitor = "DP-3",
+    default = true,
+})
+
+hl.workspace_rule({
+    workspace = "2",
+    monitor = "HDMI-A-1",
+})
+
+hl.workspace_rule({
+    workspace = "3",
+    monitor = "DP-2",
+})
+
+
+--monitor=,preferred,auto,1.0
+--monitor=eDP-1,1920x1200@60,0x0,1.0
+
+--################
+--### MONITORS ###
+--################
+
+-- source = ~/nixos-dotfiles/hosts/pc/config/hypr/hyprland.conf
+-- source = ~/nixos-dotfiles/hosts/laptop/config/hypr/hyprland.conf
+
+-------------------
+--- ENVIRONMENT ---
+-------------------
+
+-- Cursor
+hl.env("XCURSOR_THEME", "Banana")
+hl.env("XCURSOR_SIZE", "24")
+hl.env("HYPRCURSOR_THEME", "Banana")
+hl.env("HYPRCURSOR_SIZE", "24")
+
+-- Japanese Input
+-- hl.env("GTK_IM_MODULE", "uim")
+-- hl.env("QT_IM_MODULE",  "uim")
+-- hl.env("XMODIFIERS",    "@im=uim")
+
+-- GTK Apps use Portal File Picker (pls use KDE, I beg)
+hl.env("GTK_USE_PORTAL", "1")
+
+-- Electron Apps should use Wayland
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+
+---------------
+--- STARTUP ---
+---------------
+
+hl.on("hyprland.start", function()
+  -- Default Browser for opening links
+  hl.exec_cmd("xdg-mime default brave.desktop x-scheme-handler/http")
+  hl.exec_cmd("xdg-mime default brave.desktop x-scheme-handler/https")
+
+  -- Clipboard Manager
+  hl.exec_cmd("wl-paste --type text --watch cliphist store")
+  hl.exec_cmd("wl-paste --type image --watch cliphist store")
+
+  -- Top Bar
+  hl.exec_cmd("waybar")
+
+  -- Banana Cursor
+  hl.exec_cmd("hyprctl setcursor 'Banana' 24")
+  -- GTK Cursor Theme
+  hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-theme 'Banana'")
+  hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-size 24")
+
+  -- Japanese input
+  -- hl.exec_cmd("uim-xim")
+
+  -- Syncthing Tray
+  hl.exec_cmd("syncthingtray --wait")
+end)
+
+  -- To do: all of my previous shit
+
+--------------
+--- CONFIG ---
+--------------
+
+hl.config {
+  cursor = {
+    no_warps = true,
+  },
+
+  input = {
+    kb_layout = "de",
+    kb_variant = "nodeadkeys",
+    kb_model = "",
+    kb_options = "",
+    kb_rules = "",
+    numlock_by_default = true,
+
+    follow_mouse = 2,
+    sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
+
+    touchpad = {
+      natural_scroll = true,
+    },
+  },
+
+  binds = {
+    window_direction_monitor_fallback = false,
+  },
+}
+
+require("bindings")
+
+---------------------
+--- LOOK AND FEEL ---
+---------------------
+
+hl.config {
+  render = {
+    cm_auto_hdr = 2,
+  },
+
+  general = {
+    gaps_in = 3,
+    gaps_out = 3,
+    border_size = 2,
+    col = {
+      active_border = { colors = { conf.colors.purple, conf.colors.green }, angle = 90 },
+    },
+
+    -- Please see https://wiki.hyprland.org/Configuring/Advanced-and-Cool/Tearing/ before you turn this on
+    allow_tearing = true,
+    no_focus_fallback = true,
+
+    layout = "dwindle",
+  },
+
+  decoration = {
+    shadow = {
+      enabled = false,
+    },
+  },
+
+  animations = {
+    enabled = false, -- fast as fuck boiiii
+  },
+
+  dwindle = {
+    preserve_split = true, -- you probably want this
+    force_split = 2,
+  },
+
+  misc = {
+    force_default_wallpaper = 2,
+    disable_hyprland_logo = false, -- If true disables the random hyprland logo / anime girl background. :(
+
+    vrr = 3,
+    mouse_move_enables_dpms = true,
+    key_press_enables_dpms = true,
+    focus_on_activate = true,
+    allow_session_lock_restore = true,
+  },
+
+  debug = {
+      disable_logs = false,
+  },
+}
+
+--------------------
+--- WINDOW RULES ---
+--------------------
+
+hl.window_rule {
+  name = "Floating imv",
+  match = {
+    title = "^(imv)$",
+  },
+  float = true,
+}
+hl.window_rule {
+  name = "Floating Debug Windows",
+  match = {
+    title = "^(DEBUG)$",
+  },
+  float = true,
+}
+hl.window_rule {
+  name = "Floating Dolphin",
+  match = {
+    class = "^(org.kde.dolphin)$",
+  },
+  float = true,
+}
+hl.window_rule {
+  name = "Floating KDE File Selector",
+  match = {
+    class = "^(org.freedesktop.impl.portal.desktop.kde)$",
+  },
+  float = true,
+}
+hl.window_rule {
+  name = "Floating pavucontrol",
+  match = {
+    class = "^(org.pulseaudio.pavucontrol)$",
+  },
+  float = true,
+}
+hl.window_rule {
+  name = "Floating Steam",
+  match = {
+    class = "^(steam)$",
+  },
+  float = true,
+}
+hl.window_rule {
+  name = "Floating Anki",
+  match = {
+    class = "^(anki)$",
+  },
+  float = true,
+}
+hl.window_rule {
+  name = "Anki startup size",
+  match = {
+    initial_title = "^(User 1 - Anki)$",
+  },
+  size = "900, 700",
+}
+hl.window_rule {
+  name = "Floating GTK File Selector",
+  match = {
+    class = "^(xdg-desktop-portal-gtk)$",
+  },
+  float = true,
+}
+hl.window_rule {
+  name = "Floating Syncthing Tray",
+  match = {
+    initial_title = "^(Syncthing Tray)$",
+  },
+  float = true,
+  size = {"(monitor_w*0.5)", "(monitor_h*0.5)"},
+}
+

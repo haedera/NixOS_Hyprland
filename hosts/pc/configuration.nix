@@ -47,6 +47,9 @@ in {
   security.rtkit.enable = true;
 
 
+  # Firewall
+
+
   # Intel CPU
   hardware.cpu.intel.updateMicrocode = true;
   services.thermald.enable = true;
@@ -134,10 +137,11 @@ in {
   
 
   # Autologin
-  services.getty.autologinUser = "kaisel";
+  #services.getty.autologinUser = "kaisel";
 
 
   # Allow Unfree Packages explicitly
+  #nixpkgs.config.NIXPKGS_ALLOW_UNFREE=1;
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "steam"
@@ -145,10 +149,13 @@ in {
       "steam-original"
       "steam-run"
       "discord"
+
       # NVIDIA
       "nvidia-x11"
       "nvidia-settings"
       "nvidia-persistenced"
+      "nvidia-kernel-modules"
+
       "vscode"
       "idea"
       "lycheeslicer"

@@ -87,6 +87,7 @@
 	  texstudio
     	  texliveFull
 	  libreoffice
+	  xournalpp
 
 	# Desktop Util
 	  fuzzel
