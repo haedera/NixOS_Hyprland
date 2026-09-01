@@ -24,7 +24,8 @@ hl.bind(mod .. "+ SHIFT + P",      hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mod .. "+ SHIFT + W",      hl.dsp.exec_cmd("pkill -9 waybar || waybar"))
 
 -- Apps
-hl.bind(mod .. "+ RETURN",         hl.dsp.exec_cmd("wezterm"))
+--hl.bind(mod .. "+ RETURN",         hl.dsp.exec_cmd("wezterm"))
+hl.bind(mod .. "+ RETURN",         hl.dsp.exec_cmd("ghostty"))
 hl.bind(mod .. "+ E",              hl.dsp.exec_cmd("dolphin"))
 hl.bind(mod .. "+ B",              hl.dsp.exec_cmd("brave"))
 hl.bind(mod .. "+ I",              hl.dsp.exec_cmd("gimp"))
