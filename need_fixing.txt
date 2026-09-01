@@ -34,6 +34,15 @@ To-Do:
 
 
 
-	Pootential-fix (lycheeslicer)
+
+Implement new Hyprland.lua syntax:
+Fix Home-manager/implement correctly (with the multiple Host sreen setup)
+Remove UWSM
+Fix Autogreeter
+Fix Hyprlock
+Fix Filepath and name dotfiles with a '.'
+Proper and synchronous file/codelayout
+
+Pootential-fix (lycheeslicer)
 		env | grep -E '^(GTK_IM_MODULE|QT_IM_MODULE|XMODIFIERS|SDL_IM_MODULE|GLFW_IM_MODULE|INPUT_METHOD)='
 GTK_IM_MODULE=xim QT_IM_MODULE=xim XMODIFIERS=@im=none env -u NIXOS_OZONE_WL lycheeslicer --ozone-platform=x11 --no-sandbox --disable-gpu

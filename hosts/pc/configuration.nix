@@ -38,6 +38,7 @@ in {
       ../../modules/user.nix
       # ../../modules/nix.vim
       # ../../modules/home.nix
+      # ../../modules/home_pc.nix
       ../../git_config/gitconfig.nix
       # ../../.ssh
     ];

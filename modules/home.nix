@@ -9,9 +9,11 @@
 	shellAliases = {
 		btw = " test ";
 	};
+
+	#remove uwsm ----------------------------------------------------
 	profileExtra = ''
 		if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-			exec uwsm start -S hyprland-uwsm.desktop
+			exec Hyprland
 		fi
 	'';
   };
@@ -19,12 +21,12 @@
   #xsession.enable = true;
   #xsession.windowManager.command = "...";
 
-  home.file.".config/hypr".source = ../config/hypr;		# Doesn't use the hyprlock file
-  home.file.".config/waybar".source = ../config/waybar;
-  home.file.".config/foot".source = ../config/foot;
-  home.file.".config/fuzzel".source = ../config/fuzzel;
-  home.file.".config/ghostty".source = ../config/ghostty;
-  home.file.".config/fastfetch".source = ../config/fastfetch; 
+  home.file.".config/hypr".source = ../.config/hypr;		# Doesn't use the hyprlock file
+  home.file.".config/waybar".source = ../.config/waybar;
+  home.file.".config/foot".source = ../.config/foot;
+  home.file.".config/fuzzel".source = ../.config/fuzzel;
+  home.file.".config/ghostty".source = ../.config/ghostty;
+  home.file.".config/fastfetch".source = ../.config/fastfetch; 
 
     home.packages = with pkgs; [
       font-awesome
