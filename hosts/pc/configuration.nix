@@ -144,11 +144,15 @@ in {
   #nixpkgs.config.NIXPKGS_ALLOW_UNFREE=1;
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
+      # Steam
       "steam"
       "steam-unwrapped"
       "steam-original"
       "steam-run"
+
+      # Discord
       "discord"
+      "discord-unwrapped"
 
       # NVIDIA
       "nvidia-x11"
@@ -156,12 +160,17 @@ in {
       "nvidia-persistenced"
       "nvidia-kernel-modules"
 
+      # Development
       "vscode"
       "idea"
+
+      # 3D-printer
       "lycheeslicer"
+      "orca-slicer"
+
+      # VBox -> maybe removed for qemu in the future
       "virtualbox-extpack"
-    ];  
-    
+    ];    
 
   programs.zsh.shellAliases.enxc = "cd ~/NixOS/ && nvim ./hosts/pc/configuration.nix";
 
