@@ -33,7 +33,7 @@ hl.bind(mod .. "+ SHIFT + A", 	   hl.dsp.exec_cmd("steam"))
 hl.bind(mod .. "+ M",         	   hl.dsp.exec_cmd("proton-mail"))
 hl.bind(mod .. "+ SHIFT + V", 	   hl.dsp.exec_cmd("protonvpn-app"))
 hl.bind(mod .. "+ P", 	           hl.dsp.exec_cmd("proton-pass"))
---hl.bind(mod .. "V", 	           hl.dsp.exec_cmd("blue TOOTH"))
+--hl.bind(mod .. "V", 	           hl.dsp.exec_cmd("blueman"))
 hl.bind(mod .. "+ SHIFT + D", 	   hl.dsp.exec_cmd("discord"))
 --hl.bind(mod .. "", 	           hl.dsp.exec_cmd(""))
 
