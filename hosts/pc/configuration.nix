@@ -139,8 +139,7 @@ in {
 
   # Autologin
   #services.getty.autologinUser = "kaisel";
-
-
+  
   # Allow Unfree Packages explicitly
   #nixpkgs.config.NIXPKGS_ALLOW_UNFREE=1;
   nixpkgs.config.allowUnfreePredicate = pkg:
