@@ -92,7 +92,7 @@
 	  texstudio
     	  texliveFull
 	  libreoffice
-	  xournalapp
+	  xournalpp
 
 	# Desktop Util
 	  fuzzel
