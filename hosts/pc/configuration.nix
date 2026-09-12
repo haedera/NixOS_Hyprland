@@ -51,6 +51,9 @@ in {
   services.xserver.enable = true;
 
 
+  # Firewall
+
+
   # Intel CPU
   hardware.cpu.intel.updateMicrocode = true;
   services.thermald.enable = true;
@@ -139,26 +142,44 @@ in {
 
   # Autologin
   #services.getty.autologinUser = "kaisel";
-
-
+  
   # Allow Unfree Packages explicitly
+  #nixpkgs.config.NIXPKGS_ALLOW_UNFREE=1;
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
+      # Steam
       "steam"
       "steam-unwrapped"
       "steam-original"
       "steam-run"
+
+      # Discord
       "discord"
+      "discord-unwrapped"
+
       # NVIDIA
       "nvidia-x11"
       "nvidia-settings"
       "nvidia-persistenced"
+      "nvidia-kernel-modules"
+
+      # Development
       "vscode"
       "idea"
+
+      # 3D-printer
       "lycheeslicer"
+<<<<<<< HEAD
       #"virtualbox-extpack"
     ];  
     
+=======
+      "orca-slicer"
+
+      # VBox -> maybe removed for qemu in the future
+      "virtualbox-extpack"
+    ];    
+>>>>>>> refs/remotes/origin/main
 
   programs.zsh.shellAliases.enxc = "cd ~/NixOS/ && nvim ./hosts/pc/configuration.nix";
 

@@ -3,6 +3,7 @@ result
 result-*
 *.drv
 *.lock
+.lock
 
 # direnv
 .direnv

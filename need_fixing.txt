@@ -32,7 +32,26 @@ To-Do:
 
 	(Potenially write a ShellAlias for proton-mail and idea)
 
+	orca-slicer (FDM Printer)
+		--> GTK_IM_MODULE=gtk-im-context-simple orca-slicer
+	
+	lycheeslicer (Resin printer)
+		-->	mkdir -p ~/.local/share/applications
 
+			cat > ~/.local/share/applications/LycheeSlicer.desktop <<'EOF'
+			[Desktop Entry]
+			Name=Lychee Slicer
+			Exec=/run/current-system/sw/bin/lycheeslicer %u
+			Type=Application
+			MimeType=model/stl;x-scheme-handler/lycheeslicer;
+			Terminal=false
+			Categories=Graphics;
+			EOF
+	
+			update-desktop-database ~/.local/share/applications
+			xdg-mime default LycheeSlicer.desktop x-scheme-handler/lycheeslicer
+
+			xdg-mime query default x-scheme-handler/lycheeslicer
 
 
 Implement new Hyprland.lua syntax:

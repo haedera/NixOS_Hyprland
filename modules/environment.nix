@@ -5,7 +5,7 @@
   #services.openssh.enable = false; --> in services.nix
 
   #firewall
-  networking.firewall = {
+  networking.firewall = {		# previous : networking.nftables.firewall = {
     enable = true;
     allowPing = false;
     allowedTCPPorts = [ ];

@@ -38,18 +38,23 @@
 	  #psutil
 	  #nvidia-smi
 	  btop
-	 
+
+	# Game-related
+	  gamemode
+	  protonplus		# for more specific proton interface fixes for certain games
+
 	# Network tools
 	  #mullvad-vpn		# Needs an ".enable = true" to work
 	  traceroute
 	  nmap
 	  #ncat
-	  ##wireshark
+	  #wireshark
 	  net-tools
 
 
 	# 3D-Slicer for my Resin printer
 	  lycheeslicer		# requires a wrapper and environment variables to launch (Unable to login due to browser needing to launch it after Verifying)
+	  orca-slicer		# requiress the same fix lycheeslicer needs
 	  #prusa-slicer		# doesn't support my 3D Printer
 	  orca-slicer
 	
@@ -153,6 +158,5 @@
           flatpak		# for Hytale
 	  #nexusmods-app
 	  heroic
-	  protonplus		# for more specific proton interface fixes for certain games
   ];
 }

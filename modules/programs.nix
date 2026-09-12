@@ -13,6 +13,11 @@
 #	enable = true;
 #  };
 
+ # Enable gamemode
+  programs.gamemode = {
+    enable = true;
+  };
+
  # Proton-Mail
   environment.systemPackages = [ pkgs.protonmail-desktop ];
 
