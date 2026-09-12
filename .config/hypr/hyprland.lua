@@ -30,6 +30,17 @@ hl.monitor({
     transform = 3,
 })
 
+
+--hl.monitor({
+--    output   = "",
+--    mode     = "preferred",
+--    position = "auto",
+--    scale    = 1,
+--    bitdepth = 8,
+--    cm       = "auto",
+--})
+
+
 -- Workspaces
 
 hl.workspace_rule({
