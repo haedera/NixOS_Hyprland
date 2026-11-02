@@ -30,6 +30,8 @@
 	  man-pages-posix
 	  tree
 	  imagemagick	#Convert image to bitmap
+	  libmtp
+	  gvfs
 
 	# Resource - Monitoring	# Possibly needed once I implement a resource monitoring app (for waybar?)
 	  #lm-sensors
@@ -155,5 +157,9 @@
           flatpak		# for Hytale
 	  #nexusmods-app
 	  heroic
+	  lutris
+	  wineWow64Packages.staging
+	  winetricks
+
   ];
 }
