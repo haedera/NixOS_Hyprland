@@ -25,11 +25,11 @@ in {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/programs.nix
-      ../../modules/services.nix
-      ../../modules/environment.nix
-      ../../modules/graphics.nix
-      ../../modules/hardware_settings.nix
+      #../../modules/programs.nix
+      #../../modules/services.nix
+      #../../modules/environment.nix
+      #../../modules/graphics.nix
+      #../../modules/hardware_settings.nix
       ../../modules/hyprsunset.nix
       ../../modules/jai.nix
       ../../modules/japanese.nix
@@ -37,21 +37,27 @@ in {
       ../../modules/wireshark.nix
       ../../modules/user.nix
       # ../../modules/nix.vim
-      # ../../modules/home.nix
       # ../../modules/home_pc.nix
       ../../git_config/gitconfig.nix
       # ../../.ssh
+      ../../modules/prog_serv_wire.nix
+      ../../modules/env_graph_hardware.nix
     ];
 
-  # Network stuff
+  #####################################################
+  ##------------------  Networking  -----------------##
+  #####################################################
+
   networking.hostName = "tom-pc";
   security.rtkit.enable = true;
 
 
-  # Firewall
 
 
-  # Intel CPU
+  #####################################################
+  ##-----------------  Hardware-CPU  ----------------##
+  #####################################################
+
   hardware.cpu.intel.updateMicrocode = true;
   services.thermald.enable = true;
   powerManagement = {
@@ -60,7 +66,10 @@ in {
   };
 
 
-  # NVIDIA GPU
+  #####################################################
+  ##-----------------  Hardware-GPU  ----------------##
+  #####################################################
+
   boot.blacklistedKernelModules = [ "nouveau" ];
 
   hardware.nvidia = {
@@ -92,6 +101,10 @@ in {
   ];
 
 
+  #####################################################
+  ##---------------  Hardware-graphics  -------------##
+  #####################################################
+
   # OpenGL/Vulkan + 32-bit (Steam)
   hardware.graphics = {
     enable = true;
@@ -99,12 +112,20 @@ in {
   };
 
 
+  #####################################################
+  ##------------------  Environment  ----------------##
+  #####################################################
+
   # Wayland/Hyprland
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1";
     # WLR_NO_HARDWARE_CURSORS = "1";
   };
 
+
+  #####################################################
+  ##---------------------  Sound  -------------------##
+  #####################################################
 
   # Enable Sound
   services.pipewire = {
@@ -115,7 +136,7 @@ in {
     wireplumber = {
       enable = true;
 
-      # Required since the Audio Jack is in the case and therefore not recognized otherwise
+      # Required since the Audio-Jack is in the case and therefore not recognized otherwise
       extraConfig = {
         "10-default-output" = {
           "monitor.alsa.rules" = [
@@ -137,11 +158,10 @@ in {
   };
   
 
-  # Autologin
-  #services.getty.autologinUser = "kaisel";
-  
-  # Allow Unfree Packages explicitly
-  #nixpkgs.config.NIXPKGS_ALLOW_UNFREE=1;
+  #####################################################
+  ##---------------  Nix-Unfree-Pkgs  ---------------##
+  #####################################################
+
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       # Steam
@@ -162,7 +182,7 @@ in {
 
       # Development
       "vscode"
-      "idea"
+      "intellij-idea"
 
       # 3D-printer
       "lycheeslicer"
@@ -172,25 +192,17 @@ in {
       "virtualbox-extpack"
     ];    
 
+
+  #####################################################
+  ##----------------  Shell-Aliases?  ---------------##
+  #####################################################
+
   programs.zsh.shellAliases.enxc = "cd ~/NixOS/ && nvim ./hosts/pc/configuration.nix";
 
-  # Some programs need SUID wrappers, can be configured further or are started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  #####################################################
+  ##-------------------  KEEP-AWAY  -----------------##
+  #####################################################
 
   system.stateVersion = "25.11"; # No changes "25.11"
 
