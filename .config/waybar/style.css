@@ -18,7 +18,7 @@
 @define-color white #ffffff; 
 
 * {
-    font-family: 'JetBrains Mono';
+    font-family: 'JetBrainsMono Nerd Font', 'JetBrains Mono', sans-serif;
     font-size: 13px;
 }
 

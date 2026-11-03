@@ -31,8 +31,8 @@ in {
       #../../modules/graphics.nix
       #../../modules/hardware_settings.nix
       ../../modules/hyprsunset.nix
-      ../../modules/jai.nix
-      ../../modules/japanese.nix
+      #../../modules/jai.nix
+      #../../modules/japanese.nix
       ../../modules/nix_settings.nix
       ../../modules/wireshark.nix
       ../../modules/user.nix

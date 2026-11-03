@@ -11,14 +11,20 @@ in {
   environment.systemPackages = with pkgs; [
     tree
     wget
+
     waybar
+    hyprpaper
+
     kitty
     ghostty
     foot
-    hyprpaper
+    
+    vim
+    neovim
+
     zip
     unzip
-    vim
+
     git
   ];
 
@@ -164,6 +170,12 @@ in {
     keyMap = "de";
   };
 
+  #Japanese-keyboard
+  i18n.inputMethod = {
+    enable = true;
+    type = "uim";
+    # ibus.engines = with pkgs.ibus-engines; [mozc];
+  };
 }
 
 

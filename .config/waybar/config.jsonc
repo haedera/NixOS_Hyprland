@@ -57,45 +57,80 @@
     },
 
     "battery": {
-        "format": "BAT: {capacity}%"
+   	"interval": 10,
+  	"states": {
+            "warning": 30,
+            "critical": 15
+   	},
+   	"format": "{icon} {capacity}%",
+   	"format-charging": "󰂄 {capacity}%",
+    	"format-plugged": "󰚥 {capacity}%",
+    	"format-full": "󰁹 {capacity}%",
+    	"format-icons": [
+           "󰂎",
+           "󰁺",
+           "󰁻",
+           "󰁼",
+           "󰁽",
+           "󰁾",
+           "󰁿",
+           "󰂀",
+           "󰂁",
+           "󰂂",
+           "󰁹"
+    	]
     },
 
-	"clock": {
-		"format": "{:%H:%M}",
- 		"format-alt": "{:%Y-%m-%d}",
-		"tooltip-format": "{:%a %d-%m-%Y %b}"
+    "clock": {
+	"format": "{:%H:%M}",
+  	"format-alt": "{:%Y-%m-%d}",
+	"tooltip-format": "{:%a %d-%m-%Y %b}"
     },
 
     "pulseaudio": {
         "scroll-step": 0,
         "format": "{icon}  {volume}%",
-        "format-muted": "[MUTED] {volume}%",
+        "format-muted": "󰖁 {volume}%",
         "format-icons": {
-            "default": ["[=   ]", "[==  ]", "[=== ]", "[====]"]
+            "default": ["󰕿", "󰖀", "󰕾", "[====]"]
         },
         "on-click": "pavucontrol"
     },
 
     "network": {
-        "format-wifi": "Wifi: {ipaddr}",
-        "format-ethernet": "Eth: {ipaddr}",
-        "format-disconnected": "No internet",
-        "tooltip-format": "Gateway: {gwaddr} at {ifname}"
+        "interval": 5,
+        "format-wifi": "{icon}",
+	"format-wifi-alt": "{ipaddr}",
+        "format-ethernet": "󰈀 ",
+	"format-ethernet-alt": "{ipaddr}",
+        "format-disconnected": "󰖪",
+        "format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+        ],
+        "tooltip-format-wifi": "󰖩 {essid}\nSignal: {signalStrength}%\n󰒋 {gwaddr} at {ifname}",
+        "tooltip-format-ethernet": "󰈀 {ipaddr}\n󰒋 {gwaddr} at {ifname}",
+        "tooltip-format-disconnected": "󰖪 No connection"
     },
 
     "cpu": {
-        "format": "CPU: {usage}%",
+        "format": "󰻠 {usage}%",
         "tooltip": false
     },
     
     "memory": {
-        "format": "Mem: {used}GiB"
+        "format": "󰢮 {usage}%",
+	"format-alt": "󰢮 {used}GiB"
     }, 
     
     "disk": {
         "interval": 60,
        "path": "/",
-        "format": "Disk: {free}"
+        "format": "󰆓 {usage}%",
+        "format": "󰆓 {free}GiB"
    },
 
     "tray": {
