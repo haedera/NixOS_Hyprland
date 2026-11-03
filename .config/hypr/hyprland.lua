@@ -2,62 +2,74 @@ local conf = require("conf")
 
 -- Monitors
 
-hl.monitor({
-    output   = "DP-3",
-    mode     = "2560x1440@180",
-    position = "0x0",
-    scale    = 1,
-    bitdepth = 8,
-    cm       = "auto",
-})
-
-hl.monitor({
-    output   = "HDMI-A-1",
-    mode     = "1920x1080@120",
-    position = "2560x0",
-    scale    = 1,
-    bitdepth = 8,
-    cm       = "auto",
-})
-
-hl.monitor({
-    output   = "DP-2",
-    mode     = "3840x1100@60",
-    position = "-1100x0",
-    scale    = 1,
-    bitdepth = 8,
-    cm       = "auto",
-    transform = 3,
-})
-
-
 --hl.monitor({
---    output   = "",
---    mode     = "preferred",
---    position = "auto",
+--    output   = "DP-3",
+--    mode     = "2560x1440@180",
+--    position = "0x0",
 --    scale    = 1,
 --    bitdepth = 8,
 --    cm       = "auto",
 --})
 
+--hl.monitor({
+--    output   = "HDMI-A-1",
+--    mode     = "1920x1080@120",
+--    position = "2560x0",
+--    scale    = 1,
+--    bitdepth = 8,
+--    cm       = "auto",
+--})
+
+--hl.monitor({
+--    output   = "DP-2",
+--    mode     = "3840x1100@60",
+--    position = "-1100x0",
+--    scale    = 1,
+--    bitdepth = 8,
+--    cm       = "auto",
+--    transform = 3,
+--})
+
+
+hl.monitor({
+    output   = "eDP-1",
+    mode     = "preferred",
+    position = "auto",
+    scale    = 1,
+    bitdepth = 8,
+    cm       = "auto",
+})
+
+
+hl.monitor({
+    output   = "HDMI-A-1",
+    mode     = "preferred",
+    position = "auto",
+    scale    = 1,
+    bitdepth = 8,
+    cm       = "auto",
+    mirror   = "eDP-1",
+})
+
+
 
 -- Workspaces
 
-hl.workspace_rule({
-    workspace = "1",
-    monitor = "DP-3",
-    default = true,
-})
+--hl.workspace_rule({
+--    workspace = "1",
+--    monitor = "DP-3",
+--    default = true,
+--})
 
-hl.workspace_rule({
-    workspace = "2",
-    monitor = "HDMI-A-1",
-})
+--hl.workspace_rule({
+--    workspace = "2",
+--    monitor = "HDMI-A-1",
+--})
 
-hl.workspace_rule({
-    workspace = "3",
-    monitor = "DP-2",
-})
+--hl.workspace_rule({
+--    workspace = "3",
+--    monitor = "DP-2",
+--})
 
 
 --monitor=,preferred,auto,1.0

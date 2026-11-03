@@ -40,7 +40,7 @@ in {
     #ELECTRON_OZONE_PLATFORM_HINT=x11;
 
     # XDG Variables
-    XDG_DESKTOP_DIR = "";
+    XDG_DESKTOP_DIR = "$HOME/Desktop";
     XDG_DOWNLOAD_DIR = "$HOME/Downloads";
     XDG_TEMPLATES_DIR = "";
     XDG_PUBLICSHARE_DIR = "";

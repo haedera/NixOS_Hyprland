@@ -169,17 +169,12 @@ in {
 
       # 3D-printer
       "lycheeslicer"
-<<<<<<< HEAD
-      #"virtualbox-extpack"
-    ];  
-    
-=======
       "orca-slicer"
 
       # VBox -> maybe removed for qemu in the future
       "virtualbox-extpack"
     ];    
->>>>>>> refs/remotes/origin/main
+
 
   programs.zsh.shellAliases.enxc = "cd ~/NixOS/ && nvim ./hosts/pc/configuration.nix";
 

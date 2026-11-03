@@ -11,7 +11,7 @@ in {
       "libvirtd"
       "wireshark"
       "kvm"
-      #"vboxusers"
+      "vboxusers"
       "idea"
     ];
   };
@@ -69,6 +69,9 @@ in {
   services.xserver.videoDrivers = ["amdgpu"]; # Amazing naming. This is for Xorg and Wayland
   services.xserver.enable = true;
 
+  #kernel pkgs
+  #boot.kernelPackages = pkgs.linuxPackages;
+
   # Sound
   services.pipewire = {
      enable = true;
@@ -76,23 +79,38 @@ in {
      alsa.support32Bit = true;
      pulse.enable = true;
      wireplumber.enable = true;
-  };   
-  
-  # Autologin
-  #services.getty.autologinUser = "kaisel";		# Needs a rework -> possible workaround for the login exists
+  };  
 
   # Allow Unfree Packages explicitly
+  #nixpkgs.config.NIXPKGS_ALLOW_UNFREE=1;
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
+      # Steam
       "steam"
       "steam-unwrapped"
       "steam-original"
       "steam-run"
+
+      # Discord
       "discord"
+      "discord-unwrapped"
+
+      # NVIDIA
+      "nvidia-x11"
+      "nvidia-settings"
+      "nvidia-persistenced"
+      "nvidia-kernel-modules"
+
+      # Development
       "vscode"
-      "idea"
+      "intellij-idea"
+
+      # 3D-printer
       "lycheeslicer"
-      #"virtualbox-extpack"
+      "orca-slicer"
+
+      # VBox -> maybe removed for qemu in the future
+      "virtualbox-extpack"
     ];  
 
 
@@ -106,8 +124,6 @@ in {
   #   enable = true;
   #   enableSSHSupport = true;
   # };
-
-  # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

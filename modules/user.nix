@@ -9,7 +9,7 @@
 	    "docker"
 	    "wireshark"
 	    "kvm"
-	    #"vboxusers"
+	    "vboxusers"
 	    "idea"
     ];
   };
@@ -71,15 +71,7 @@
 	  gcc
 	  #python3-gi
 	  #pwntools
-	  python3
-	  #python3-gi		# throws an error while compiling
-	  #(pkgs.python3.withPackages (ps: with ps; [	# failed attempt at adding extensions without pip
-  	  #   #ipykernel
-  	  #   numpy
- 	  #   pandas
- 	  #   pwntools
-	  #   jupyter-all
-  	  #]))
+	  python3 
 	  pwntools	# Python3 pwntools
 	  jdk21
 	  cmake
