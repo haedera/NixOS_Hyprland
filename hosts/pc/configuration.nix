@@ -25,23 +25,15 @@ in {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      #../../modules/programs.nix
-      #../../modules/services.nix
-      #../../modules/environment.nix
-      #../../modules/graphics.nix
-      #../../modules/hardware_settings.nix
       ../../modules/hyprsunset.nix
       #../../modules/jai.nix
       #../../modules/japanese.nix
       ../../modules/nix_settings.nix
       ../../modules/wireshark.nix
       ../../modules/user.nix
-      # ../../modules/nix.vim
-      # ../../modules/home_pc.nix
       ../../git_config/gitconfig.nix
-      # ../../.ssh
-      ../../modules/prog_serv_wire.nix
-      ../../modules/env_graph_hardware.nix
+      ../../modules/programs_services.nix
+      ../../modules/hardware_environment.nix
     ];
 
   #####################################################
