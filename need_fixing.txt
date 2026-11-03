@@ -1,12 +1,9 @@
 To-Do:
 
-	lycheeslicer
-	UWSM --> either deactivate or fix (waybar issues)
 	GOG-Galaxy
 	Wallpaper --> Waybar/Hyprland setup
 	Games
 		--> Binding of Isaac
-		--> Cyberpunk, ...
 	change network interface to Symbols. 
 		--> IP on Hover Upload/Download
 		--> Onclick Upload Download
@@ -33,6 +30,7 @@ To-Do:
 	(Potenially write a ShellAlias for proton-mail and idea)
 
 	orca-slicer (FDM Printer)
+		--> GDK_BACKEND=x11 orca-slicer
 		--> GTK_IM_MODULE=gtk-im-context-simple orca-slicer
 	
 	lycheeslicer (Resin printer)
@@ -53,13 +51,8 @@ To-Do:
 
 			xdg-mime query default x-scheme-handler/lycheeslicer
 
-
-Implement new Hyprland.lua syntax:
 Fix Home-manager/implement correctly (with the multiple Host sreen setup)
-Remove UWSM
-Fix Autogreeter
 Fix Hyprlock
-Fix Filepath and name dotfiles with a '.'
 Proper and synchronous file/codelayout
 
 Pootential-fix (lycheeslicer)

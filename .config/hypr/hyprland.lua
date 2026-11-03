@@ -7,14 +7,16 @@ local conf = require("conf")
 --    mode     = "2560x1440@180",
 --    position = "0x0",
 --    scale    = 1,
---    bitdepth = 8,
---    cm       = "auto",
+--    cm       = "srgb", -- or "srgb", "hdr", "dcip3", "wide"
+--    bitdepth = 10,     -- Recommended for better color handling
+--    sdrbrightness = 1.2,
+--    sdrsaturation = 0.98,
 --})
 
 --hl.monitor({
 --    output   = "HDMI-A-1",
 --    mode     = "1920x1080@120",
---    position = "2560x0",
+--    position = "-1920x0",
 --    scale    = 1,
 --    bitdepth = 8,
 --    cm       = "auto",
@@ -23,12 +25,13 @@ local conf = require("conf")
 --hl.monitor({
 --    output   = "DP-2",
 --    mode     = "3840x1100@60",
---    position = "-1100x0",
+--    position = "2560x0",
 --    scale    = 1,
 --    bitdepth = 8,
 --    cm       = "auto",
 --    transform = 3,
 --})
+
 
 
 hl.monitor({

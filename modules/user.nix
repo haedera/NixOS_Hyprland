@@ -32,6 +32,8 @@
 	  tree
 	  imagemagick	#Convert image to bitmap
 	  xkeyboard_config
+	  libmtp
+	  gvfs
 
 	# Resource - Monitoring	# Possibly needed once I implement a resource monitoring app (for waybar?)
 	  #lm-sensors
@@ -150,5 +152,9 @@
           flatpak		# for Hytale
 	  #nexusmods-app
 	  heroic
+	  lutris
+	  wineWow64Packages.staging
+	  winetricks
+
   ];
 }
