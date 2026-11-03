@@ -26,30 +26,28 @@ in {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/programs.nix
-      ../../modules/services.nix
-      ../../modules/environment.nix
-      ../../modules/graphics.nix
-      ../../modules/hardware_settings.nix
       ../../modules/hyprsunset.nix
       ../../modules/jai.nix
       ../../modules/japanese.nix
       ../../modules/nix_settings.nix
-      ../../modules/wireshark.nix
       ../../modules/user.nix
-      # ../../modules/nix.vim
-      # ../../modules/home.nix
-      # ../../modules/home_laptop.nix
       ../../git_config/gitconfig.nix
-      # ../../.ssh
+      ../../modules/hardware_environment.nix
+      ../../modules/programs_services.nix
     ];
 
-  # Network stuff
+  #####################################################
+  ##------------------  Networking  -----------------##
+  #####################################################
+
   networking.hostName = "tom-laptop";
   security.rtkit.enable = true;
 
   
-  # Graphics
+  #####################################################
+  ##---------------  Hardware-CPU-iGPU  -------------##
+  #####################################################
+
   hardware.graphics = {
     enable = true;
 
@@ -64,11 +62,14 @@ in {
     package32 = hypr-pkgs.pkgsi686Linux.mesa;
   };
 
-  # Services set / enable
-  services.xserver.videoDrivers = ["amdgpu"]; # Amazing naming. This is for Xorg and Wayland
+  services.xserver.videoDrivers = ["amdgpu"];
   #services.xserver.enable = true;
 
-  # Sound
+
+  #####################################################
+  ##---------------------  Sound  -------------------##
+  #####################################################
+
   services.pipewire = {
      enable = true;
      alsa.enable = true;
@@ -77,10 +78,11 @@ in {
      wireplumber.enable = true;
   };   
   
-  # Autologin
-  #services.getty.autologinUser = "kaisel";		# Needs a rework -> possible workaround for the login exists
 
-  # Allow Unfree Packages explicitly
+  #####################################################
+  ##---------------  Nix-Unfree-Pkgs  ---------------##
+  #####################################################
+
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "steam"
@@ -95,27 +97,16 @@ in {
     ];  
 
 
-  # programs.firefox.enable = true;
+  #####################################################
+  ##----------------  Shell-Aliases?  ---------------##
+  #####################################################
 
   programs.zsh.shellAliases.enxc = "cd ~/NixOS/ && nvim ./hosts/laptop/configuration.nix";
 
-  # Some programs need SUID wrappers, can be configured further or are started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  #####################################################
+  ##-------------------  KEEP-AWAY  -----------------##
+  #####################################################
 
   system.stateVersion = "25.11"; # No changes "25.11"
 
