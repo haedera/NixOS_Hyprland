@@ -22,6 +22,9 @@ hl.bind(mod .. "+ SHIFT + R",      hl.dsp.exec_cmd("hyprctl reload"))
 --hl.bind(mod ..        " + period", hl.dsp.exec_cmd("rofimoji -a copy -s neutral -r '> ' --selector fuzzel --clipboarder wl-copy"))
 hl.bind(mod .. "+ SHIFT + P",      hl.dsp.exec_cmd("hyprlock"))
 hl.bind(mod .. "+ SHIFT + W",      hl.dsp.exec_cmd("pkill -9 waybar || waybar"))
+hl.bind(mod .. "+  CTRL + SPACE",  hl.dsp.exec_cmd("fcitx5-remote -t"))
+
+
 
 -- Apps
 --hl.bind(mod .. "+ RETURN",         hl.dsp.exec_cmd("wezterm"))

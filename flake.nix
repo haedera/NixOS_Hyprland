@@ -38,6 +38,7 @@
 						users.kaisel = {
 							imports = [
 							  ./modules/home.nix
+							  #./modules/home_pc.nix
 							];
 						};
 						backupFileExtension = "backup";
@@ -61,6 +62,7 @@
 						users.kaisel = {
 							imports = [
 							  ./modules/home.nix
+							  #./modules/home_laptop.nix
 							];
 						};
 						backupFileExtension = "backup";

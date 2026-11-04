@@ -8,6 +8,7 @@
 	    "libvirtd"
 	    "docker"
 	    "wireshark"
+	    "kvm"
 	    "vboxusers"
 	    "idea"
     ];
@@ -30,6 +31,7 @@
 	  man-pages-posix
 	  tree
 	  imagemagick	#Convert image to bitmap
+	  xkeyboard_config
 	  libmtp
 	  gvfs
 
@@ -56,6 +58,7 @@
 	  lycheeslicer		# requires a wrapper and environment variables to launch (Unable to login due to browser needing to launch it after Verifying)
 	  orca-slicer		# requiress the same fix lycheeslicer needs
 	  #prusa-slicer		# doesn't support my 3D Printer
+	  orca-slicer
 	
 	# IDEs
 	  neovim
@@ -70,20 +73,12 @@
 	  gcc
 	  #python3-gi
 	  #pwntools
-	  python3
-	  #python3-gi		# throws an error while compiling
-	  #(pkgs.python3.withPackages (ps: with ps; [	# failed attempt at adding extensions without pip
-  	  #   #ipykernel
-  	  #   numpy
- 	  #   pandas
- 	  #   pwntools
-	  #   jupyter-all
-  	  #]))
+	  python3 
 	  pwntools	# Python3 pwntools
 	  jdk21
 	  cmake
 	  jupyter-all
-	  #qemu
+	  qemu
 
 	# Programm-Monitoring
 	  imhex
@@ -157,9 +152,5 @@
           flatpak		# for Hytale
 	  #nexusmods-app
 	  heroic
-	  lutris
-	  wineWow64Packages.staging
-	  winetricks
-
   ];
 }

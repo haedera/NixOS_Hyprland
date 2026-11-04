@@ -169,13 +169,6 @@ in {
     font = "Lat2-Terminus16";
     keyMap = "de";
   };
-
-  #Japanese-keyboard
-  i18n.inputMethod = {
-    enable = true;
-    type = "uim";
-    # ibus.engines = with pkgs.ibus-engines; [mozc];
-  };
 }
 
 

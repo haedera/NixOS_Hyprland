@@ -33,8 +33,9 @@ hl.monitor({
 --})
 
 
+
 --hl.monitor({
---    output   = "",
+--    output   = "eDP-1",
 --    mode     = "preferred",
 --    position = "auto",
 --    scale    = 1,
@@ -43,23 +44,35 @@ hl.monitor({
 --})
 
 
+--hl.monitor({
+--    output   = "HDMI-A-1",
+--    mode     = "preferred",
+--    position = "auto",
+--    scale    = 1,
+--    bitdepth = 8,
+--    cm       = "auto",
+--    mirror   = "eDP-1",
+--})
+
+
+
 -- Workspaces
 
-hl.workspace_rule({
-    workspace = "1",
-    monitor = "DP-3",
-    default = true,
-})
+--hl.workspace_rule({
+--    workspace = "1",
+--    monitor = "DP-3",
+--    default = true,
+--})
 
-hl.workspace_rule({
-    workspace = "2",
-    monitor = "HDMI-A-1",
-})
+--hl.workspace_rule({
+--    workspace = "2",
+--    monitor = "HDMI-A-1",
+--})
 
-hl.workspace_rule({
-    workspace = "3",
-    monitor = "DP-2",
-})
+--hl.workspace_rule({
+--    workspace = "3",
+--    monitor = "DP-2",
+--})
 
 
 --monitor=,preferred,auto,1.0
@@ -116,7 +129,7 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("gsettings set org.gnome.desktop.interface cursor-size 24")
 
   -- Japanese input
-  -- hl.exec_cmd("uim-xim")
+  hl.exec_cmd("fcitx5 -d")
 
   -- Syncthing Tray
   hl.exec_cmd("syncthingtray --wait")

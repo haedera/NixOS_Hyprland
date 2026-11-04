@@ -27,7 +27,7 @@ in {
       ./hardware-configuration.nix
       ../../modules/hyprsunset.nix
       #../../modules/jai.nix
-      #../../modules/japanese.nix
+      ../../modules/japanese.nix
       ../../modules/nix_settings.nix
       ../../modules/user.nix
       ../../git_config/gitconfig.nix
@@ -41,8 +41,7 @@ in {
 
   networking.hostName = "tom-pc";
   security.rtkit.enable = true;
-
-
+  services.xserver.enable = true;
 
 
   #####################################################
@@ -183,7 +182,7 @@ in {
       "virtualbox-extpack"
     ];    
 
-
+  
   #####################################################
   ##----------------  Shell-Aliases?  ---------------##
   #####################################################

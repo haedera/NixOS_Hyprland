@@ -8,9 +8,12 @@
 	enable = true;
 	shellAliases = {
 		btw = " test ";
+		#orcaslicer 	-> orca     (launchoptions)
+		#lycheeslicer 	-> lychee   (launchoptions)
+		#intellij	-> intelliJ (launchoptions)
+		#jupyter	-> jupyter  (launchoptions)
 	};
 
-	#remove uwsm ----------------------------------------------------
 	profileExtra = ''
 		if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
 			exec Hyprland
@@ -23,9 +26,17 @@
 
   home.file.".config/hypr".source = ../.config/hypr;		# Doesn't use the hyprlock file
   home.file.".config/waybar".source = ../.config/waybar;
+
+  #needs proper "ricing"
   home.file.".config/foot".source = ../.config/foot;
+
+  #needs to be properly "purged" (I don't use fuzzel)
   home.file.".config/fuzzel".source = ../.config/fuzzel;
+
+  #needs "purging" (I only need one "riced" terminal)
   home.file.".config/ghostty".source = ../.config/ghostty;
+
+  #Do I need thsi?
   home.file.".config/fastfetch".source = ../.config/fastfetch; 
 
     home.packages = with pkgs; [

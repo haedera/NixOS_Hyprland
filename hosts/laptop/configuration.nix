@@ -10,6 +10,7 @@ in {
       "docker"
       "libvirtd"
       "wireshark"
+      "kvm"
       "vboxusers"
       "idea"
     ];
@@ -76,7 +77,8 @@ in {
      alsa.support32Bit = true;
      pulse.enable = true;
      wireplumber.enable = true;
-  };   
+  };  
+
   
 
   #####################################################
@@ -85,14 +87,31 @@ in {
 
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
+      # Steam
       "steam"
       "steam-unwrapped"
       "steam-original"
       "steam-run"
+
+      # Discord
       "discord"
+      "discord-unwrapped"
+
+      # NVIDIA
+      "nvidia-x11"
+      "nvidia-settings"
+      "nvidia-persistenced"
+      "nvidia-kernel-modules"
+
+      # Development
       "vscode"
-      "idea"
+      "intellij-idea"
+
+      # 3D-printer
       "lycheeslicer"
+      "orca-slicer"
+
+      # VBox -> maybe removed for qemu in the future
       "virtualbox-extpack"
     ];  
 
