@@ -152,9 +152,5 @@
           flatpak		# for Hytale
 	  #nexusmods-app
 	  heroic
-	  lutris
-	  wineWow64Packages.staging
-	  winetricks
-
   ];
 }

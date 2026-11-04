@@ -115,9 +115,6 @@ in {
       "virtualbox-extpack"
     ];  
 
-    # temporary:
-  nixpkgs.config.problems.handlers."gtk+".broken = "ignore";
-
 
   #####################################################
   ##----------------  Shell-Aliases?  ---------------##
