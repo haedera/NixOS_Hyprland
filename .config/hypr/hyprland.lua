@@ -9,8 +9,8 @@ hl.monitor({
     scale    = 1,
     cm       = "srgb", -- or "srgb", "hdr", "dcip3", "wide"
     bitdepth = 10,     -- Recommended for better color handling
-    sdrbrightness = 1.2,
-    sdrsaturation = 0.98,
+    -- sdrbrightness = 1.2,
+    -- sdrsaturation = 0.98,
 })
 
 hl.monitor({

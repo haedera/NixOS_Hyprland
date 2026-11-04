@@ -29,7 +29,6 @@ in {
       #../../modules/jai.nix
       #../../modules/japanese.nix
       ../../modules/nix_settings.nix
-      ../../modules/wireshark.nix
       ../../modules/user.nix
       ../../git_config/gitconfig.nix
       ../../modules/programs_services.nix

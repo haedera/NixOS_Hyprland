@@ -31,21 +31,21 @@
     ],
 
     "hyprland/workspaces": {
-		"format": "{icon}",
-		"on-click": "activate",
-		"format-icons": {
-			"1": "一",
-			"2": "二",
-			"3": "三",
-			"4": "四",
-			"5": "五",
-			"6": "六",
-			"7": "七",
-			"8": "八",
-			"9": "九",
-			"10": "十"
-		},
-		"sort-by-number": true
+	"format": "{icon}",
+	"on-click": "activate",
+	"format-icons": {
+	    "1": "一",
+	    "2": "二",
+	    "3": "三",
+	    "4": "四",
+	    "5": "五",
+	    "6": "六",
+	    "7": "七",
+	    "8": "八",
+	    "9": "九",
+	    "10": "十"
+	},
+	"sort-by-number": true
     },
 
     "custom/wireguard": {
@@ -92,7 +92,7 @@
         "format": "{icon}  {volume}%",
         "format-muted": "󰖁 {volume}%",
         "format-icons": {
-            "default": ["󰕿", "󰖀", "󰕾", "[====]"]
+            "default": ["󰕿", "󰖀", "󰕾", "󰓃"]
         },
         "on-click": "pavucontrol"
     },
@@ -122,16 +122,16 @@
     },
     
     "memory": {
-        "format": "󰢮 {usage}%",
+        "format": "󰢮 {percentage}%",
 	"format-alt": "󰢮 {used}GiB"
     }, 
     
     "disk": {
         "interval": 60,
-       "path": "/",
-        "format": "󰆓 {usage}%",
-        "format": "󰆓 {free}GiB"
-   },
+        "path": "/",
+        "format": "󰆓 {percentage_used}%",
+        "format-alt": "󰆓 {free}"
+    },
 
     "tray": {
         "icon-size": 18,
